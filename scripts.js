@@ -1,4 +1,4 @@
-// Slider Functionality
+// Slider Functionality (if applicable)
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
