@@ -41,16 +41,17 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     background-color: rgba(0, 51, 102, 0.8);
     color: white;
     text-align: center;
     padding: 20px 0;
-}
-
-.introduction {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
 }
