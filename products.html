@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Our Products</h1>
     </header>
+
+    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -18,15 +21,30 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section class="uniforms-container">
-        <div class="uniform-item">
-            <img src="images/uniform1.PNG" alt="Jacket">
-            <p>Jacket</p>
+
+    <!-- Products Section -->
+    <section id="uniforms-section">
+        <h2>Our Uniforms</h2>
+        <div id="uniforms-container" class="uniforms-container">
+            <div class="uniform-item" data-category="jackets">
+                <img src="images/uniform1.PNG" alt="Uniform 1">
+                <p>Jacket 1</p>
+                <span>Price Available on Request</span>
+            </div>
+            <div class="uniform-item" data-category="blazers">
+                <img src="images/uniform2.PNG" alt="Uniform 2">
+                <p>Blazer 1</p>
+                <span>Price Available on Request</span>
+            </div>
+            <!-- Add more products as needed -->
         </div>
-        <!-- Additional product items -->
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Xingashe Uniforms</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
