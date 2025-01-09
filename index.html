@@ -3,13 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xingashe Uniforms</title>
+    <title>Home - Xingashe Uniforms</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>XINGASHE UNIFORMS</h1>
+        <h1>Welcome to Xingashe Uniforms</h1>
         <p>High-quality uniforms for schools, businesses, and more!</p>
     </header>
 
@@ -23,32 +97,56 @@
         </ul>
     </nav>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Xingashe Uniforms</h2>
-        <p>Xingashe Trading is a 100% black youth female-owned company based in Engcobo, Eastern Cape. We specialize in the production and supply of uniforms and paraphernalia for schools, churches, and other organizations. We also offer branding services, including embroidery and other printing options.</p>
-    </section>
-
-
-    <!-- Target Market Section -->
-    <section class="target-market">
-        <h2>Target Market</h2>
-        <p>We serve local schools, both junior and high schools, as well as government and private businesses. Additionally, we offer regalia for churches, unions, and other organizations.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Contact Andiswa: <strong>078 894 9551</strong></p>
-        <p>Email: <a href="mailto:info@xingasheuniforms.com">info@xingasheuniforms.com</a></p>
+    <!-- Featured Products Slideshow -->
+    <section id="featured-products">
+        <h2>Featured Products</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="uniform1.PNG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="uniform2.PNG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="uniform3.PNG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="uniform4.PNG" style="width:100%">
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Xingashe Uniforms</p>
-        <p>Tsazo Location, Manzana AA, Engcobo, Eastern Cape</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
 </body>
 </html>
