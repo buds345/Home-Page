@@ -1,159 +1,167 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Body Styling */
-body {
-    background-color: #f8f8f8;
-    color: #333;
-    line-height: 1.6;
-    text-align: center;
+    background-color: #f5f5f5;
 }
 
 /* Header */
 header {
     background-color: #000;
-    color: #fff;
-    padding: 20px;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 32px;
+    margin: 0;
+    font-size: 28px;
 }
 
-/* Navigation Bar */
+/* Navigation Menu */
 nav {
     background-color: #222;
     padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #fff;
     font-size: 18px;
-    padding: 10px 20px;
-    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #444;
-    border-radius: 5px;
+    color: #f4b400; /* Gold hover effect */
 }
 
-/* Categories Section */
-#categories {
-    margin: 40px 0;
-}
-
-.category-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.category-box {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.category-box:hover {
-    background-color: #444;
-}
-
-/* Watches Section */
-.watch-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Featured Products Section */
+.featured-products {
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.watch-item {
-    background-color: #fff;
-    padding: 15px;
+.featured-products h2 {
+    color: #222;
+    font-size: 24px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-container .product {
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 250px;
+    padding: 15px;
+    margin: 10px;
+    width: 250px;
     text-align: center;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
-.watch-item img {
+.product-container .product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.watch-item p {
-    font-weight: bold;
-    margin: 10px 0;
+.product h3 {
     font-size: 18px;
+    color: #333;
 }
 
-.watch-item span {
-    color: #d32f2f;
-    font-size: 18px;
-    font-weight: bold;
+.product p {
+    color: #777;
+    font-size: 14px;
 }
 
-.watch-item:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+/* Categories for Male & Female Watches */
+.categories {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 24px;
+    color: #222;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category h3 {
+    color: #222;
+    font-size: 20px;
+}
+
+.category img {
+    width: 80%;
+    border-radius: 10px;
 }
 
 /* Footer */
 footer {
     background-color: #222;
-    color: #fff;
-    padding: 10px;
+    color: white;
     text-align: center;
+    padding: 15px;
     margin-top: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    .featured-products, .categories {
+        width: 95%;
     }
 
-    .watch-container {
-        flex-direction: column;
-        align-items: center;
+    .category {
+        width: 100%;
     }
 
-    .category-container {
+    .product-container {
         flex-direction: column;
-        align-items: center;
     }
 
-    .category-box {
-        width: 80%;
-        text-align: center;
+    .product {
+        width: 90%;
     }
 }
