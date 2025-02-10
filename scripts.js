@@ -1,10 +1,9 @@
-// Slider Functionality (if applicable)
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+        slide.style.display = i === index ? 'block' : 'none';
     });
 }
 
@@ -13,5 +12,6 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
+// Initialize the slideshow
 showSlide(currentSlide);
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
