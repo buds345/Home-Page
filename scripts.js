@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.watch-slide');
 
 function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -12,6 +12,8 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-// Initialize the slideshow
+// Automatically change slide every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Show the first slide initially
 showSlide(currentSlide);
-setInterval(nextSlide, 3000); // Change slide every 3 seconds
