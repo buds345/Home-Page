@@ -71,6 +71,43 @@
             from {opacity: .4} 
             to {opacity: 1}
         }
+        footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social-media {
+  list-style: none;
+  padding: 0;
+}
+
+footer .social-media li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .social-media a {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+footer .social-media a:focus {
+  outline: 2px solid #ff6600; /* Change this color for better visibility */
+}
+@media (max-width: 600px) {
+  footer .social-media li {
+    margin: 0 5px;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -114,9 +151,30 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Quad Jewellers</p>
+        <!--Footer content, ie social media platforms-->
+            <div class="footer-content">
+                <p>&copy; 2025 Quad Jewellers</p>
+              <ul class="social-media">
+                <li><a href="https://twitter.com/yourprofile" target="_blank" aria-label="Follow us on Twitter">
+                  <img src="twitter-icon.svg" alt="" role="presentation">
+                </a></li>
+                <li><a href="https://facebook.com/yourprofile" target="_blank" aria-label="Follow us on Facebook">
+                  <img src="facebook-icon.svg" alt="" role="presentation">
+                </a></li>
+                <li><a href="https://instagram.com/yourprofile" target="_blank" aria-label="Follow us on Instagram">
+                  <img src="instagram-icon.svg" alt="" role="presentation">
+                </a></li>
+               
+              </ul>
+            </div>
+         
     </footer>
-
+    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Follow us on Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M23 3c-1.04 0-2.04.38-2.83 1.02C19.57 3.7 18.39 3 17 3c-2.8 0-5.03 2.24-5.03 5.03 0 .39.03.77.1 1.14C9.28 9.89 7.01 8.63 5.22 6.95c-.36.62-.56 1.35-.56 2.12 0 1.47.75 2.76 1.88 3.52-.7-.02-1.36-.21-1.94-.53-.01.02-.01.04-.01.06-.01.25-.01.51.03.76.1.27.3.49.56.67-.71-.02-1.35-.23-1.93-.6-.08-.22-.13-.46-.16-.71-.03-.01-.06-.03-.1-.05-.02-.01-.05-.02-.08-.03-.19-.09-.38-.19-.57-.29-.16-.13-.33-.26-.49-.4.08-.11.16-.21.25-.31C6.12 11.39 9.88 12 13 12c2.87 0 5.29-2.34 5.29-5.29C18.29 5.79 20 4 23 3z"/>
+        </svg>
+      </a>
+      
     <script>
         let slideIndex = 0;
         showSlides();
