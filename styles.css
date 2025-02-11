@@ -105,8 +105,8 @@ nav ul li a:hover {
 }
 
 .watch-item img {
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: 60;
     border-radius: 8px;
 }
 
