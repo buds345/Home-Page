@@ -5,38 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Jewellery watches</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-      
-footer .social-media {
-  list-style: none;
-  padding: 0;
-}
-
-footer .social-media li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-footer .social-media a {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-
-footer .social-media img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-footer .social-media a:focus {
-  outline: 2px solid #ff6600; /* Change this color for better visibility */
-}
-@media (max-width: 600px) {
-  footer .social-media li {
-    margin: 0 5px;
-  }
-}
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -48,38 +16,50 @@ footer .social-media a:focus {
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">View Watches</a></li>
+            <li><a href="products.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
     <!-- Contact Section -->
-    <section>
-        <h2>Get in Touch</h2>
-        <p>Contact Andiswa: <strong>063 187 0585</strong></p>
-        <p>Email: <a href="mailto:banelebanele938@gmail.com">banelebanele938@gmail.com</a></p>
+    <section class="contact-container">
+        <div class="contact-info">
+            <br>
+            <p>General Queries Email: <a href="mailto:customercare@quadjewellers.co.za">customercare@quadjewellers.co.za</a></p>
+            <br>
+            <p>Physical Address: </p>
+            <p>123 Greenacres Shopping Center, Gqeberha 6001, South Africa</p>
+            <br>
+            <p>Trading Hours: </p>
+            <p><strong>Monday - Friday: 08h00 - 16h00</strong></p>
+            <p><strong>Saturday: 08h00 - 13h00</strong></p>
+            <p><strong>Sunday: Closed</strong></p>
+            <br>
+            <p>Phone: <a href="phoneto:0314452728">031 445 2728</a></p>
+        </div>
+        <div class="contact-card">
+            <p>Have questions or need assistance? We're here to help!</p>
+
+            <form id="contact-form" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <button type="submit">Send Message</button>
+            </form>
+            
+        </div>
+        <p id="form-status"></p>
     </section>
-    
+
     <!-- Footer -->
     <footer>
-        <!--Footer content, ie social media platforms -->
-            <div class="footer-content">
-                <p>&copy; 2025 Quad Jewellers</p>
-              <ul class="social-media">
-                <li><a href="https://x.com/?lang=en-za&mx=2" target="_blank" aria-label="Follow us on Twitter">
-                  <img src="images/twitter.jfif" alt="" role="presentation">
-                </a></li>
-                <li><a href="https://www.facebook.com/login.php/" target="_blank" aria-label="Follow us on Facebook">
-                  <img src="images/Facebook_logo.jpeg" alt="" role="presentation">
-                </a></li>
-                <li><a href="https://www.instagram.com/accounts/login/" target="_blank" aria-label="Follow us on Instagram">
-                  <img src="images/instagram.jfif" alt="" role="presentation">
-                </a></li>
-               
-              </ul>
-            </div>
-         
+        <p>&copy; 2024 Jewllery Watches</p>
     </footer>
 </body>
 </html>
