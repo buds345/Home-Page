@@ -8,7 +8,7 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1);
+    currentSlide = (currentSlide + 1)%slides.length;
     showSlide(currentSlide);
 }
 
