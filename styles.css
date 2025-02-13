@@ -55,6 +55,100 @@ nav ul li a:hover {
     background-color: #444;
     border-radius: 5px;
 }
+.contact-section {
+    background-color: white;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 3rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.contact-container {
+    display: flex; /* Arrange items side by side */
+    justify-content: space-between; /* Add spacing between elements */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between elements */
+    max-width: 1000px; /* Adjust width */
+    margin: 3rem auto; /* Center the section */
+    padding: 20px;
+}
+.contact-info {
+    flex: 1; /* Takes available space */
+    max-width: 45%; /* Controls width */
+}
+
+.contact-card {
+    background: white;
+    padding: 20px;
+    max-width: 500px; /* Adjust width */
+    margin: 20px auto; /* Center the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #aaa; /* Add a border */
+    flex: 1; /* Takes available space */
+    
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the form elements */
+    width: 100%; /* Ensure the form container takes full width */
+}
+
+.contact-form label {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;  /* Reduce width */
+    font-size: 14px; /* Smaller text */
+    max-width: 350px; /* Prevent excessive stretching on large screens */
+    margin: 5px auto; /* Auto margins center it properly */
+    text-align: center;
+}
+.contact-form textarea {
+    height: 80px; /* Reduce textarea height */
+}
+
+.contact-form button {
+    
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 300px; /* Prevent excessive stretching on large screens */
+    margin: 5px auto; /* Auto margins center it properly */
+    text-align: center;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+#form-status {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: green;
+}
+
 
 /* Categories Section */
 #categories {
