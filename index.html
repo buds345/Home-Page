@@ -145,25 +145,25 @@ footer .social-media a:focus {
         <h2>Featured Watches</h2>
         <div class="slideshow-container">
             <div class="mySlides fade">
- <img src="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=1200,h=600,dpr=2.0/2025/02/Titanuhren-2-1-1.jpeg" srcset="https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=360,h=180,dpr=1.0/2025/02/Titanuhren-2-1-1.jpeg 360w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=720,h=360,dpr=1.0/2025/02/Titanuhren-2-1-1.jpeg 720w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=980,h=490,dpr=1.0/2025/02/Titanuhren-2-1-1.jpeg 980w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=1190,h=595,dpr=1.0/2025/02/Titanuhren-2-1-1.jpeg 1190w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=720,h=360,dpr=2.0/2025/02/Titanuhren-2-1-1.jpeg 1440w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=980,h=490,dpr=2.0/2025/02/Titanuhren-2-1-1.jpeg 1960w, https://magazine.chrono24.com/cdn-cgi/image/f=auto,metadata=none,fit=cover,q=65,w=1190,h=595,dpr=2.0/2025/02/Titanuhren-2-1-1.jpeg 2380w" sizes="(min-width: 1260px) 1190px, (min-width: 998px) 980px, (min-width: 451px) 720px, 100vw" alt="Titanuhren 2-1 (1)" width="1190" height="595" class="img-responsive">
+                <img src="images/photo7.png"style="width:70%" alt="Luxury Watch 2">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo1.png" style="width:100%" alt="Luxury Watch 2">
+                <img src="images/photo1.png" style="width:70%" alt="Luxury Watch 2">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo2.png" style="width:100%" alt="Luxury Watch 3">
+                <img src="images/photo2.png" style="width:70%" alt="Luxury Watch 3">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo3.png" style="width:100%" alt="Luxury Watch 4">
+                <img src="images/photo3.png" style="width:70%" alt="Luxury Watch 4">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo4.png" style="width:100%" alt="Luxury Watch 7">
+                <img src="images/photo4.png" style="width:70%" alt="Luxury Watch 7">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo5.png" style="width:100%" alt="Luxury Watch 8">
+                <img src="images/photo5.png" style="width:70%" alt="Luxury Watch 8">
             </div>
             <div class="mySlides fade">
-                <img src="images/photo6.png" style="width:100%" alt="Luxury Watch 9">
+                <img src="images/photo6.png" style="width:70%" alt="Luxury Watch 9">
             </div>
         </div>
         <br>
@@ -222,9 +222,9 @@ footer .social-media a:focus {
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
             for (let i = 0; i < slides.length; i++) {
+                slideIndex++;
                 slides[i].style.display = "none";  
             }
-            slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}    
             for (let i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
