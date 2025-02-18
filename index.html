@@ -225,7 +225,7 @@ footer .social-media a:focus {
                 slides[i].style.display = "none";  
             }
             slideIndex++;
-            if (slideIndex > slides.length) {slideIndex --1}    
+            if (slideIndex > slides.length) {slideIndex =1}    
             for (let i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
