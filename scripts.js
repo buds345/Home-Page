@@ -1,19 +1,27 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.watch-slide');
+let slideIndex = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
+function showSlide() {
+    let slides = document.getElementsByClassName("slide");
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Move to the next slide
+    slideIndex++;
+
+    // If it's the last slide, go back to the first one
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
+
+    // Display the current slide
+    slides[slideIndex].style.display = "block";
+
+    // Change slide every 3 seconds (adjust timing as needed)
+    setTimeout(showSlide, 3000);
 }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1)%slides.length;
-    showSlide(currentSlide);
-}
-
-// Automatically change slide every 3 seconds
-setInterval(nextSlide, 3000);
-
-// Show the first slide initially
-showSlide(currentSlide);
+// Start the slideshow
+showSlide();
