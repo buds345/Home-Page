@@ -90,8 +90,6 @@ function showPopup(message, type) {
     document.body.appendChild(popup);
 }
 
-
-
 // Store Search Functionality
 const stores = [
     { name: "Shop 1,Greenacres Shopping Center", location: "Gqeberha" },
