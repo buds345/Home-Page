@@ -49,6 +49,7 @@
             font-size: 18px;
             font-weight: normal;    
             transition: all 0.3s ease; 
+        }
 
         /* On Hover */
         nav a:hover {
@@ -67,9 +68,9 @@
         /* Hide all slides initially */
         .mySlides {
             display: none;
-            width: 400px;
+            width: 100%; /* Full width of the container */
             height: 400px; /* Fixed height for equal sizing */
-            object-fit: cover; /* Ensure images scale correctly */
+            object-fit: cover; /* Ensures images cover the container without stretching */
             transition: opacity 1s ease-in-out; /* Smooth transition */
         }
 
@@ -195,13 +196,13 @@
         <h2 style="text-align: center;">Featured Watches</h2>
 
         <div class="slideshow-container">
-            <img class="mySlides" src="images/photo7.png" style="width:100%" alt="Luxury Watch 1">
-            <img class="mySlides" src="images/photo1.png" style="width:100%" alt="Luxury Watch 2">
-            <img class="mySlides" src="images/photo2.png" style="width:100%" alt="Luxury Watch 3">
-            <img class="mySlides" src="images/photo3.png" style="width:100%" alt="Luxury Watch 4">
-            <img class="mySlides" src="images/photo4.png" style="width:100%" alt="Luxury Watch 7">
-            <img class="mySlides" src="images/photo5.png" style="width:100%" alt="Luxury Watch 8">
-            <img class="mySlides" src="images/photo6.png" style="width:100%" alt="Luxury Watch 9">
+            <img class="mySlides" src="images/photo7.png" alt="Luxury Watch 1">
+            <img class="mySlides" src="images/photo1.png" alt="Luxury Watch 2">
+            <img class="mySlides" src="images/photo2.png" alt="Luxury Watch 3">
+            <img class="mySlides" src="images/photo3.png" alt="Luxury Watch 4">
+            <img class="mySlides" src="images/photo4.png" alt="Luxury Watch 7">
+            <img class="mySlides" src="images/photo5.png" alt="Luxury Watch 8">
+            <img class="mySlides" src="images/photo6.png" alt="Luxury Watch 9">
         </div>
 
         <div class="dots-container">
@@ -216,7 +217,6 @@
     </section>
 
     <footer>
-      <!--Footer content, ie social media platforms -->
       <div class="container">
         <div class="row">
           <div class="col">
