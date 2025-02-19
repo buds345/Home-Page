@@ -6,6 +6,57 @@
     <title>Home - QUADS JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Navbar Styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav li {
+            margin: 0 15px; /* Space between links */
+        }
+
+        nav a {
+            text-decoration: none;  /* Remove underline */
+            color: black;           /* Default color */
+            font-size: 18px;
+            font-weight: normal;    /* Default weight */
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* On Hover */
+        nav a:hover {
+            font-weight: bold;  /* Make text bold on hover */
+            color: inherit;     /* Keep the color same as the original (no blue) */
+        }
+
         /* Slideshow container */
         .slideshow-container {
             position: relative;
@@ -14,45 +65,32 @@
             overflow: hidden;
         }
 
+        /* Hide all slides initially */
         .mySlides {
             display: none;
-            position: absolute;
             width: 100%;
             height: 400px; /* Fixed height for equal sizing */
-            object-fit: cover; /* Ensures images scale correctly to the container */
-            animation: rotateSlide 1.5s ease-in-out;
+            object-fit: cover; /* Ensure images scale correctly */
+            transition: opacity 1s ease-in-out; /* Smooth transition */
         }
 
-        /* 🚀 New 360-degree rotation effect */
-        @keyframes rotateSlide {
-            from {
-                transform: rotate(0deg) scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: rotate(360deg) scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Dots for navigation */
+        /* Dots container */
         .dots-container {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .dot {
-            height: 12px;
-            width: 12px;
-            margin: 5px;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
             background-color: #bbb;
             border-radius: 50%;
             display: inline-block;
-            cursor: pointer;
-            transition: background-color 0.6s;
+            transition: background-color 0.6s ease;
         }
 
-        .active, .dot:hover {
+        .dot.active {
             background-color: #717171;
         }
 
@@ -138,12 +176,6 @@
         }
 
     </style>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
 </head>
 <body>
     <header>
@@ -215,7 +247,7 @@
     </footer>
 
     <script>
-         let slideIndex = 0;
+        let slideIndex = 0;
         showSlides();
 
         function showSlides() {
