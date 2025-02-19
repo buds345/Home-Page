@@ -18,6 +18,8 @@
             display: none;
             position: absolute;
             width: 100%;
+            height: 400px; /* Fixed height for equal sizing */
+            object-fit: cover; /* Ensures images scale correctly to the container */
             animation: rotateSlide 1.5s ease-in-out;
         }
 
@@ -230,7 +232,7 @@
             }
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].classList.add("active");
-            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+            setTimeout(showSlides, 2000); // Reduced timeout to 2 seconds
         }
     </script>
 
