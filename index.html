@@ -71,41 +71,90 @@
             from {opacity: .4} 
             to {opacity: 1}
         }
-        footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+       /* Footer Styling */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer .social-media {
-  list-style: none;
-  padding: 0;
+/* Ensure all content is centered */
+.container {
+    width: 100%;
+    max-width: 600px; /* Prevents content from stretching too wide */
 }
 
-footer .social-media li {
-  display: inline-block;
-  margin: 0 10px;
+/* Stack the rows */
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-footer .social-media a {
-  display: block;
-  width: 40px;
-  height: 40px;
+.col {
+    text-align: center;
 }
 
-footer .social-media img {
-  width: 100%;
-  height: 100%;
-  display: block;
+/* Footer Links */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block; /* Each link on a new line */
+    margin-bottom: 5px;
 }
-footer .social-media a:focus {
-  outline: 2px solid #ff6600; /* Change this color for better visibility */
+
+footer a:hover {
+    color: blue;
 }
-@media (max-width: 600px) {
-  footer .social-media li {
-    margin: 0 5px;
-  }
+
+/* Social Media Icons - Centered */
+.footer-content {
+    margin-top: 15px;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media a {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Ensure Footer Stays at Bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
 
     </style>
