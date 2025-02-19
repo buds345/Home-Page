@@ -16,37 +16,84 @@
     <link rel="stylesheet" href="styles.css">
     
     <style>
-        /* Center the slideshow */
+        /* Ensure header is centered */
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+
+        /* Navigation Menu Styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background: #444;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background: #555;
+        }
+
+        /* Slideshow Styling */
         .slideshow-container {
             position: relative;
-            max-width: 600px;
+            max-width: 1000px;
             margin: auto;
-            overflow: hidden;
         }
 
         .mySlides {
             display: none;
+        }
+
+        .fade {
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.4 } 
+            to { opacity: 1 }
+        }
+
+        /* Navigation buttons */
+        .prev, .next {
+            cursor: pointer;
             position: absolute;
-            width: 100%;
-            animation: rotateSlide 1.5s ease-in-out;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        /* 360-degree rotation effect */
-        @keyframes rotateSlide {
-            from {
-                transform: rotate(0deg) scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: rotate(360deg) scale(1);
-                opacity: 1;
-            }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
         }
 
-        /* Dots for navigation */
+        /* Dots under the slideshow */
         .dots-container {
             text-align: center;
-            margin-top: 15px;
+            padding: 10px;
         }
 
         .dot {
@@ -63,6 +110,7 @@
         .active, .dot:hover {
             background-color: #717171;
         }
+
         /* Footer Styling */
         footer {
             background-color: #222;
@@ -143,20 +191,26 @@
 
     <!-- Slideshow Section -->
     <section id="featured-products">
-      <h2 style="text-align: center;">Featured Watches</h2>
+        <h2 style="text-align: center;">Featured Watches</h2>
 
-      <div class="slideshow-container">
-          <img class="mySlides" src="images/photo7.png" style="width:100%" alt="Luxury Watch 1">
-          <img class="mySlides" src="images/photo1.png" style="width:100%" alt="Luxury Watch 2">
-          <img class="mySlides" src="images/photo2.png" style="width:100%" alt="Luxury Watch 3">
-      </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/photo7.png" style="width:100%" alt="Luxury Watch 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo1.png" style="width:100%" alt="Luxury Watch 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/photo2.png" style="width:100%" alt="Luxury Watch 3">
+            </div>
+        </div>
 
-      <div class="dots-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-  </section>
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -177,29 +231,30 @@
 
     <!-- JavaScript -->
     <script>
-      let slideIndex = 0;
-      showSlides();
+        let slideIndex = 0;
+        showSlides();
 
-      function showSlides() {
-          let slides = document.getElementsByClassName("mySlides");
-          let dots = document.getElementsByClassName("dot");
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
 
-          for (let i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
 
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
 
-          for (let i = 0; i < dots.length; i++) {
-              dots[i].classList.remove("active");
-          }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
 
-          slides[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].classList.add("active");
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].classList.add("active");
 
-          setTimeout(showSlides, 3000); // Change slide every 3 seconds
-      }
-  </script>
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+
 </body>
 </html>

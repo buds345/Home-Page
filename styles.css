@@ -404,6 +404,6 @@ html {
     color: white;
 }
 
-footer a:hover {
+.container a:hover {
     color: blue;
 }
