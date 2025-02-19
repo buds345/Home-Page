@@ -400,6 +400,6 @@ footer .social-media {
 html {
     scroll-behavior: smooth;
 }
-.container{
-    color: #ccc;
+a{
+    color: beige
 }
