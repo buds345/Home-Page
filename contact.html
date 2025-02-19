@@ -21,6 +21,17 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Store Search Section -->
+    <section class="search-container">
+        <h2>Find a Store</h2>
+        <form id="store-search-form" onsubmit="handleSearch(event)">
+            <input type="text" id="searchBar" placeholder="Enter your location..." required>
+            <button type="submit">Search</button>
+        </form>
+        <ul id="storeList" class="store-list"></ul>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-container">
         <div class="contact-info">
@@ -59,7 +70,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Jewllery Watches</p>
+        <p>&copy; 2024 Jewellery Watches</p>
     </footer>
+    
+    <script src="scripts.js"></script>
+    
 </body>
 </html>
