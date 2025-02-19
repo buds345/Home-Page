@@ -400,6 +400,13 @@ footer .social-media {
 html {
     scroll-behavior: smooth;
 }
-footer .container{
-    color: beige
-}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  a:hover {
+    color: blue;
+  }
+  
