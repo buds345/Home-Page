@@ -25,7 +25,6 @@ function showSlide() {
 
 // Start the slideshow
 showSlide();
-
 //Contact Us Page
 // Handle the form submission and validation
 document.addEventListener("DOMContentLoaded", function () {
@@ -90,6 +89,8 @@ function showPopup(message, type) {
     document.body.appendChild(popup);
 }
 
+
+
 // Store Search Functionality
 const stores = [
     { name: "Shop 1,Greenacres Shopping Center", location: "Gqeberha" },
@@ -121,4 +122,5 @@ function handleSearch(event) {
 
     displayStores(filteredStores);
 }
+
 
