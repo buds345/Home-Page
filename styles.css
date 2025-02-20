@@ -38,6 +38,7 @@ header h1 {
 
         nav li {
             margin: 0 15px; /* Space between links */
+            background-color: #333;
         }
 
         nav a {
