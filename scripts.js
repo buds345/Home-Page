@@ -1,4 +1,3 @@
-
 //Contact Us Page
 // Handle the form submission and validation
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,6 +76,16 @@ const stores = [
 function displayStores(filteredStores) {
     const storeList = document.getElementById("storeList");
     storeList.innerHTML = ""; // Clear previous results
+
+    if (filteredStores.length === 0) {
+        // Show "No stores found" message
+        const noResults = document.createElement("li");
+        noResults.className = "store-item no-results";
+        noResults.textContent = "Sorry we have no stores at the entered location.";
+        storeList.appendChild(noResults);
+        return;
+    }
+
     filteredStores.forEach(store => {
         const li = document.createElement("li");
         li.className = "store-item";
@@ -96,5 +105,3 @@ function handleSearch(event) {
 
     displayStores(filteredStores);
 }
-
-
