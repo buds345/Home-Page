@@ -16,67 +16,45 @@
         }
 
 /* Header */
-header {
-    background-color: #000;
-    color: #fff;
-     padding: 30px 0;
-    
-    text-align: center;
-}
 
 header h1 {
     font-size: 28px;
     font-family:Cormorant Garamond;
     
 }
-/* General Navbar Styling */
-nav {
-    background-color: #333;  /* Dark background */
-    text-align: center;      /* Center align */
-    padding: 10px 0;         /* Padding to give spacing */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Reset default browser styles */
+* {
     margin: 0;
-    display: flex;
-    justify-content: center; /* Center navigation items */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav li {
-    margin: 0 15px;
+/* Ensure the navbar touches the top */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-nav a {
-    text-decoration: none;
-    color: white; /* Make sure text is white */
-    font-size: 18px;
-    font-weight: normal;
-    padding: 8px 15px; /* Padding inside buttons */
-    display: inline-block;
-    transition: all 0.3s ease; /* Smooth transition */
-    background-color: #333; /* Ensure background matches */
+/* Navbar Styling */
+nav {
+    background-color: #000;  /* Make it the same black color */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding as needed */
+    width: 100%;
+    position: relative; /* Keep it at the top without issues */
 }
 
-/* On Hover */
-nav a:hover {
-    font-weight: bold;
-    background-color: #555; /* Slightly lighter background */
-    border-radius: 5px; /* Rounded corners */
+/* Ensure header has no extra spacing */
+header {
+    margin: 0;
+    padding: 20px 0;
+    background-color: #000; /* Same color as navbar */
+    text-align: center;
+    color: white;
 }
 
-/* Active Page Styling */
-nav a.active {
-    font-weight: bold;
-    background-color: #444; /* Slightly darker background for active page */
-    border-radius: 5px;
-}
-
-/* Add margin to body to prevent content from being hidden behind fixed nav */
-body {
-    padding-top: 70px; /* Adjust based on nav height */
-}
 
 /* About Section Styling */
 #about-section {
