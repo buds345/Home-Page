@@ -105,3 +105,15 @@ function handleSearch(event) {
 
     displayStores(filteredStores);
 }
+
+function showWatchDetails(name, price, stock, description) {
+    // Create a modal-like display or alert box
+    const details = `
+        Watch Name: ${name}\n
+        Price: ${price}\n
+        Stock Status: ${stock}\n
+        Description: ${description}
+    `;
+    alert(details);
+}
+
