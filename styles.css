@@ -89,6 +89,7 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
+
 /* Mission Section Styling */
 #mission-section {
     width: 85%; /* Make it a bit smaller */
@@ -207,6 +208,7 @@ nav ul li a:hover {
     color: #c09f77; /* Gold color for luxury feel */
     font-weight: bold;
 }
+
 /* Locations Section Styling */
 #locations-section {
     width: 85%; /* Make it a bit smaller */
@@ -258,6 +260,7 @@ nav ul li a:hover {
     color: #c09f77; /* Gold color for luxury feel */
     font-weight: bold;
 }
+
 
 /* Pop-up styles */
 .popup {
