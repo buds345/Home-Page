@@ -3,74 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Watches - QUAD JEWELLERS</title>
+    <title>Rolex - Product Details - QUAD JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        footer .social-media {
-            list-style: none;
-            padding: 0;
+        /* Simple styling for the product details page */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
-        footer .social-media li {
-            display: inline-block;
-            margin: 0 10px;
+
+        .product-details img {
+            max-width: 300px;
+            margin-bottom: 20px;
         }
-        footer .social-media a {
-            display: block;
-            width: 40px;
-            height: 40px;
+
+        .product-details h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
-        footer .social-media img {
-            width: 100%;
-            height: 100%;
-            display: block;
+
+        .product-details .price {
+            font-size: 1.5rem;
+            color: #FF6600;
+            margin-bottom: 20px;
         }
-        footer .social-media a:focus {
-            outline: 2px solid #ff6600; /* Change this color for better visibility */
+
+        .product-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
-        @media (max-width: 600px) {
-            footer .social-media li {
-                margin: 0 5px;
-            }
+
+        .back-link {
+            margin-top: 20px;
+            font-size: 1rem;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <h1>QUAD JEWELLERS</h1>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav>
+    <!-- Product Details Section -->
+    <section class="product-details">
+        <img src="images/pro3.png" alt="Rolex Watch">
+        <h1>Rolex - Premium Luxury Watch</h1>
+        <span class="price">R659.99</span>
+        <p>This Rolex watch is a symbol of prestige and sophistication. Made with high-quality materials and meticulous craftsmanship, this timepiece offers both style and functionality.</p>
+        <p>Features:</p>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">View Watches</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li>Stainless Steel Case</li>
+            <li>Water Resistant</li>
+            <li>Automatic Movement</li>
+            <li>Luxury Design</li>
         </ul>
-    </nav>
+        <p>Perfect for any occasion, whether you're at a formal event or casual outing, this watch will elevate your look.</p>
 
-    <!-- Watch Section -->
-    <section id="#rolex">
-               <!-- Rolex watch link modified here -->
-        <div class="watch-item">
-            <img src="images/pro3.png" alt="Men's Watch 4">
-            <p>
-                <!-- Updated the href to a direct product page -->
-                <a href="rolex-details.html">Rolex</a>
-            </p>
-            <span>R659.99</span>
-        </div>
-
+        <!-- Back to product list -->
+        <a href="products.html" class="back-link">Back to Products</a>
     </section>
 
-    <!-- Footer with Social Media Links -->
+    <!-- Footer -->
     <footer>
-        <ul class="social-media">
-            <li><a href="https://www.facebook.com" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
-            <li><a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
-            <li><a href="https://www.twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a></li>
-        </ul>
+        <div class="footer-content">
+            <ul class="social-media">
+                <!-- Social media links (same as before) -->
+                <li><a href="https://x.com/?lang=en-za&mx=2" target="_blank" aria-label="Follow us on Twitter">
+                    <img src="images/twitter.jfif" alt="" role="presentation">
+                </a></li>
+                <li><a href="https://www.facebook.com/login.php/" target="_blank" aria-label="Follow us on Facebook">
+                    <img src="images/Facebook_logo.jpeg" alt="" role="presentation">
+                </a></li>
+                <li><a href="https://www.instagram.com/accounts/login/" target="_blank" aria-label="Follow us on Instagram">
+                    <img src="images/instagram.jfif" alt="" role="presentation">
+                </a></li>
+            </ul>
+        </div>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
