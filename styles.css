@@ -59,7 +59,7 @@ nav a {
 }
 
 nav a:hover {
-    color: yellow;
+    color: white;
     font-weight: bold;
 }
 /* Add margin to body to prevent content from being hidden behind fixed nav */
