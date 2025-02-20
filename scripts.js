@@ -25,6 +25,7 @@ function showSlide() {
 
 // Start the slideshow
 showSlide();
+
 //Contact Us Page
 // Handle the form submission and validation
 document.addEventListener("DOMContentLoaded", function () {
