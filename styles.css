@@ -55,10 +55,11 @@ nav ul li a:hover {
     background-color: #444;
     border-radius: 5px;
 }
+
 /* About Section Styling */
 #about-section {
-    width: 70%; /* Make it a bit smaller */
-    max-width: 700px;
+    width: 85%; /* Make it a bit smaller */
+    max-width: 900px;
     margin: 30px auto; /* Centering */
     padding: 20px;
     background: white;
@@ -67,7 +68,7 @@ nav ul li a:hover {
 }
 
 #about-section h2 {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     color: #333;
     margin-bottom: 15px;
@@ -76,7 +77,7 @@ nav ul li a:hover {
 }
 
 #about-section p {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -86,6 +87,58 @@ nav ul li a:hover {
 /* Add spacing between paragraphs */
 #about-section p:not(:last-child) {
     margin-bottom: 15px;
+}
+
+/* Objectives Section Styling */
+#objectives-section {
+    width: 85%; /* Make it a bit smaller */
+    max-width: 900px;
+    margin: 30px auto; /* Centering */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#objectives-section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+}
+#objectives-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify; /* Makes it look neat */
+}
+#objectives-section ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+    margin: 15px 0;
+}
+
+#objectives-section ul li {
+    position: flex;
+    /*padding-left: 22px; /* Space for custom bullet */
+    /*margin-bottom: 10px;*/
+    align-items: center; /* Vertically centers them */
+    gap: 8px; /* Adjusts space between tick and text */
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+#objectives-section ul li::before {
+    content: "✔"; /* Custom bullet (can be changed) */
+    /*position: absolute;
+    left: 0;
+    top: 0px;*/
+    font-size: 18px;
+    color: #c09f77; /* Gold color for luxury feel */
+    font-weight: bold;
 }
 
 /* Pop-up styles */
@@ -109,7 +162,7 @@ nav ul li a:hover {
 
 /* Different colors for success and error */
 .popup.success {
-    background: #28a745;
+    background: grey;
 }
 
 .popup.error {
@@ -263,6 +316,44 @@ nav ul li a:hover {
     font-weight: bold;
     margin-top: 1rem;
     color: green;
+}
+
+/* Recommendations */
+.all_recommendations {
+    display: flex;
+    align-items: center;
+    margin-left: 1in;
+    flex-direction: row;
+    flex-flow: wrap;
+    padding: 20px;
+  }
+  
+  .recommendation {
+    font-style: italic;
+    text-align: left;
+    width: 21.875rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 20px;
+    margin: 10px;
+    border:1px solid gray;
+    font-size: 14px;
+    height: 200px;
+    /*overflow-y: auto; /* Enables vertical scrolling if needed */
+  }
+  
+  .recommendation span {
+    color: #7600bc;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .stars {
+    font-size: 18px;
+    color: gold; /* Makes the stars gold */
+    margin-bottom: 1px; /* Adds spacing between stars and the text */
 }
 
 
