@@ -27,34 +27,45 @@ header h1 {
     font-size: 28px;
     font-family:Cormorant Garamond;
 }
- nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-             
-        }
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; /* Ensure visibility */
+    padding: 15px 0; /* Add some padding for better spacing */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
 
-        nav li {
-            margin: 0 15px; /* Space between links */
-            background-color: #333;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+     background-color:#333;
+}
 
-        nav a {
-            text-decoration: none;  
-            color: inherit;          
-            font-size: 18px;
-            font-weight: normal;    
-            transition: all 0.3s ease; 
-        }
+nav li {
+    margin: 0 15px;
+    background-color:#333;
 
-        /* On Hover */
-        nav a:hover {
-            font-weight: bold;  /* Make text bold on hover */
-            color: white;     /* Keep the color same as the original (no blue) */
-        }
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
 
+nav a:hover {
+    font-weight: bold;
+}
+
+/* Add margin to body to prevent content from being hidden behind fixed nav */
+body {
+    padding-top: 70px; /* Adjust based on nav height */
+}
 
 /* About Section Styling */
 #about-section {
