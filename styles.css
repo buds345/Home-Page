@@ -57,6 +57,20 @@ nav ul li a:hover {
     background-color: #444;
     border-radius: 5px;
 }
+ nav a {
+            text-decoration: none;  
+            color: inherit;          
+            font-size: 18px;
+            font-weight: normal;    
+            transition: all 0.3s ease; 
+        }
+
+        /* On Hover */
+        nav a:hover {
+            font-weight: bold;  /* Make text bold on hover */
+            color: white;     /* Keep the color same as the original (no blue) */
+        }
+
 
 /* About Section Styling */
 #about-section {
