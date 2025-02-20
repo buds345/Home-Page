@@ -15,53 +15,45 @@ body {
 }
 
 /* Header */
-/*header {
+header {
     background-color: #000;
     color: #fff;
      padding: 30px 0;
     
     text-align: center;
-}*/
+}
 
 header h1 {
     font-size: 28px;
     font-family:Cormorant Garamond;
 }
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
+  /* Navbar Styling */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+             
+        }
 
-nav {
-    background-color: #444;
-    padding: 10px 0;
-}
+        nav li {
+            margin: 0 15px; /* Space between links */
+        }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+        nav a {
+            text-decoration: none;  
+            color: inherit;          
+            font-size: 18px;
+            font-weight: normal;    
+            transition: all 0.3s ease; 
+        }
 
-nav li {
-    display: inline;
-    margin: 0 15px;
-    background-color: #333;
-    color:white;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: white;
-    font-weight: bold;
-}
+        /* On Hover */
+        nav a:hover {
+            font-weight: bold;  /* Make text bold on hover */
+            color: white;     /* Keep the color same as the original (no blue) */
+        }
 /* Add margin to body to prevent content from being hidden behind fixed nav */
 body {
     padding-top: 70px; /* Adjust based on nav height */
