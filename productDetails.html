@@ -3,60 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolex - Product Details - QUAD JEWELLERS</title>
+    <title>Shop Watches - QUAD JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Simple styling for the product details page */
-        .product-details {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
+        
+footer .social-media {
+  list-style: none;
+  padding: 0;
+}
 
-        .product-details img {
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
+footer .social-media li {
+  display: inline-block;
+  margin: 0 10px;
+}
 
-        .product-details h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
+footer .social-media a {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
 
-        .product-details .price {
-            font-size: 1.5rem;
-            color: #FF6600;
-            margin-bottom: 20px;
-        }
-
-        .product-details p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .back-link {
-            margin-top: 20px;
-            font-size: 1rem;
-            text-decoration: none;
-            color: #000;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
+footer .social-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+footer .social-media a:focus {
+  outline: 2px solid #ff6600; /* Change this color for better visibility */
+}
+@media (max-width: 600px) {
+  footer .social-media li {
+    margin: 0 5px;
+  }
+}
     </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <h1>QUAD JEWELLERS</h1>
     </header>
 
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">View Watches</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Product Categories -->
+    <section id="categories">
+        <h2>Choose Your Style</h2>
+        <div class="category-container">
+            <a href="#mens-watches" class="category-box">Men’s Watches</a>
+            <a href="#womens-watches" class="category-box">Women’s Watches</a>
+        </div>
+    </section>
+
     <!-- Product Details Section -->
-    <section class="product-details">
+    <section class="productDetails.html">
+        <div id="container">
         <img src="images/pro3.png" alt="Rolex Watch">
         <h1>Rolex - Premium Luxury Watch</h1>
         <span class="price">R659.99</span>
@@ -69,7 +78,7 @@
             <li>Luxury Design</li>
         </ul>
         <p>Perfect for any occasion, whether you're at a formal event or casual outing, this watch will elevate your look.</p>
-
+        </div>
         <!-- Back to product list -->
         <a href="products.html" class="back-link">Back to Products</a>
     </section>
