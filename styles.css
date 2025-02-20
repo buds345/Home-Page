@@ -29,35 +29,50 @@ header h1 {
     font-family:Cormorant Garamond;
     
 }
-  /* Navbar Styling */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-             
-        }
+/* General Navbar Styling */
+nav {
+    background-color: #333;  /* Dark background */
+    text-align: center;      /* Center align */
+    padding: 10px 0;         /* Padding to give spacing */
+}
 
-        nav li {
-            margin: 0 15px; /* Space between links */
-            background-color:#333;
-             color: #fff;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation items */
+}
 
-        nav a {
-            text-decoration: none;  
-            color: inherit;          
-            font-size: 18px;
-            font-weight: normal;    
-            transition: all 0.3s ease; 
-        }
+nav li {
+    margin: 0 15px;
+}
 
-        /* On Hover */
-        nav a:hover {
-            font-weight: bold;  /* Make text bold on hover */
-            color: white;     /* Keep the color same as the original (no blue) */
-        }
+nav a {
+    text-decoration: none;
+    color: white; /* Make sure text is white */
+    font-size: 18px;
+    font-weight: normal;
+    padding: 8px 15px; /* Padding inside buttons */
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition */
+    background-color: #333; /* Ensure background matches */
+}
+
+/* On Hover */
+nav a:hover {
+    font-weight: bold;
+    background-color: #555; /* Slightly lighter background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Active Page Styling */
+nav a.active {
+    font-weight: bold;
+    background-color: #444; /* Slightly darker background for active page */
+    border-radius: 5px;
+}
+
 /* Add margin to body to prevent content from being hidden behind fixed nav */
 body {
     padding-top: 70px; /* Adjust based on nav height */
