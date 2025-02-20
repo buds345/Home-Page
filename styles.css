@@ -89,6 +89,73 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
+/* Mission Section Styling */
+#mission-section {
+    width: 85%; /* Make it a bit smaller */
+    max-width: 900px;
+    margin: 30px auto; /* Centering */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mission-section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+}
+
+#mission-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify; /* Makes it look neat */
+}
+
+/* Add spacing between paragraphs */
+#mission-section p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Customer Section Styling */
+#customer-section {
+    width: 85%; /* Make it a bit smaller */
+    max-width: 900px;
+    margin: 30px auto; /* Centering */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#customer-section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+}
+
+#customer-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify; /* Makes it look neat */
+}
+
+/* Add spacing between paragraphs */
+#customer-section p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
 /* Objectives Section Styling */
 #objectives-section {
     width: 85%; /* Make it a bit smaller */
@@ -132,6 +199,57 @@ nav ul li a:hover {
 }
 
 #objectives-section ul li::before {
+    content: "✔"; /* Custom bullet (can be changed) */
+    /*position: absolute;
+    left: 0;
+    top: 0px;*/
+    font-size: 18px;
+    color: #c09f77; /* Gold color for luxury feel */
+    font-weight: bold;
+}
+/* Locations Section Styling */
+#locations-section {
+    width: 85%; /* Make it a bit smaller */
+    max-width: 900px;
+    margin: 30px auto; /* Centering */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#locations-section h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+}
+#locations-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify; /* Makes it look neat */
+}
+#locations-section ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+    margin: 15px 0;
+}
+
+#locations-section ul li {
+    position: flex;
+    /*padding-left: 22px; /* Space for custom bullet */
+    /*margin-bottom: 10px;*/
+    align-items: center; /* Vertically centers them */
+    gap: 8px; /* Adjusts space between tick and text */
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+
+#locations-section ul li::before {
     content: "✔"; /* Custom bullet (can be changed) */
     /*position: absolute;
     left: 0;
