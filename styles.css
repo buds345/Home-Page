@@ -45,7 +45,18 @@ nav {
     width: 100%;
     position: relative; /* Keep it at the top without issues */
 }
+ nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+             
+        }
 
+        nav li {
+            margin: 0 15px; /* Space between links */
+        }
 /* Ensure header has no extra spacing */
 header {
     margin: 0;
