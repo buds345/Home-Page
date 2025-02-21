@@ -319,7 +319,7 @@
         background: #222;
         color: #fff;
         padding: 15px;
-        border-radius: 5px;
+        border-radius: 35px;
         font-size: 14px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         z-index: 1000;
@@ -331,7 +331,7 @@
     
     /* Different colors for success and error */
     .popup.success {
-        background: grey;
+        background: black;
     }
     
     .popup.error {
