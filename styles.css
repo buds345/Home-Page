@@ -1,648 +1,763 @@
-    /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Body Styling */
-
-  body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-/* Header */
-
-header h1 {
-    font-size: 28px;
-    font-family:Cormorant Garamond;
-    
-}
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Ensure the navbar touches the top */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Navbar Styling */
-nav {
-    background-color: #333;  /* Make it the same black color */
-    text-align: center;
-    padding: 10px 0; /* Adjust padding as needed */
-    width: 100%;
-    position: relative; /* Keep it at the top without issues */
-}
- nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-             
-        }
-
-        nav li {
-            margin: 0 15px; /* Space between links */
-        }
-/* Ensure header has no extra spacing */
-header {
-    margin: 0;
-    padding: 20px 0;
-    background-color: #000; /* Same color as navbar */
-    text-align: center;
-    color: white;
-}
-
-
-/* About Section Styling */
-#about-section {
-    width: 85%; /* Make it a bit smaller */
-    max-width: 900px;
-    margin: 30px auto; /* Centering */
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about-section h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-
-#about-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-align: justify; /* Makes it look neat */
-}
-
-/* Add spacing between paragraphs */
-#about-section p:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-
-/* Mission Section Styling */
-#mission-section {
-    width: 85%; /* Make it a bit smaller */
-    max-width: 900px;
-    margin: 30px auto; /* Centering */
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#mission-section h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-
-#mission-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-align: justify; /* Makes it look neat */
-}
-
-/* Add spacing between paragraphs */
-#mission-section p:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-/* Customer Section Styling */
-#customer-section {
-    width: 85%; /* Make it a bit smaller */
-    max-width: 900px;
-    margin: 30px auto; /* Centering */
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#customer-section h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-
-#customer-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-align: justify; /* Makes it look neat */
-}
-
-/* Add spacing between paragraphs */
-#customer-section p:not(:last-child) {
-    margin-bottom: 15px;
-}
-
-
-/* Objectives Section Styling */
-#objectives-section {
-    width: 85%; /* Make it a bit smaller */
-    max-width: 900px;
-    margin: 30px auto; /* Centering */
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-#objectives-section h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-#objectives-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-align: justify; /* Makes it look neat */
-}
-#objectives-section ul {
-    list-style: none; /* Removes default bullets */
-    padding: 0;
-    margin: 15px 0;
-}
-
-#objectives-section ul li {
-    position: flex;
-    /*padding-left: 22px; /* Space for custom bullet */
-    /*margin-bottom: 10px;*/
-    align-items: center; /* Vertically centers them */
-    gap: 8px; /* Adjusts space between tick and text */
-    font-size: 16px;
-    color: #444;
-    line-height: 1.6;
-}
-
-#objectives-section ul li::before {
-    content: "✔"; /* Custom bullet (can be changed) */
-    /*position: absolute;
-    left: 0;
-    top: 0px;*/
-    font-size: 18px;
-    color: #c09f77; /* Gold color for luxury feel */
-    font-weight: bold;
-}
-
-/* Locations Section Styling */
-#locations-section {
-    width: 85%; /* Make it a bit smaller */
-    max-width: 900px;
-    margin: 30px auto; /* Centering */
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-#locations-section h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #222;
-    padding-bottom: 5px;
-}
-#locations-section p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-align: justify; /* Makes it look neat */
-}
-#locations-section ul {
-    list-style: none; /* Removes default bullets */
-    padding: 0;
-    margin: 15px 0;
-}
-
-#locations-section ul li {
-    position: flex;
-    /*padding-left: 22px; /* Space for custom bullet */
-    /*margin-bottom: 10px;*/
-    align-items: center; /* Vertically centers them */
-    gap: 8px; /* Adjusts space between tick and text */
-    font-size: 16px;
-    color: #444;
-    line-height: 1.6;
-}
-
-#locations-section ul li::before {
-    content: "✔"; /* Custom bullet (can be changed) */
-    /*position: absolute;
-    left: 0;
-    top: 0px;*/
-    font-size: 18px;
-    color: #c09f77; /* Gold color for luxury feel */
-    font-weight: bold;
-}
-
-
-/* Pop-up styles */
-.popup {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #222;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    text-align: center;
-    min-width: 250px;
-    max-width: 90%;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Different colors for success and error */
-.popup.success {
-    background: grey;
-}
-
-.popup.error {
-    background: #dc3545;
-}
-
-/* OK Button */
-.popup-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background: #fff;
-    color: #222;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.popup-button:hover {
-    background: #ddd;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-10px);
+ /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
     }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-
- /* Search Bar Styling */
-.search-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-#searchBar {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.store-list {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-.store-item {
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin: 5px auto;
-    border-radius: 5px;
-    background: #f9f9f9;
-    width: 80%;
-    max-width: 400px;
-}
-
-.contact-section {
-    background-color: white;
-    padding: 2rem;
-    max-width: 600px;
-    margin: 3rem auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-.contact-container {
-    display: flex; /* Arrange items side by side */
-    justify-content: space-between; /* Add spacing between elements */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Space between elements */
-    max-width: 1000px; /* Adjust width */
-    margin: 3rem auto; /* Center the section */
-    padding: 20px;
-}
-.contact-info {
-    flex: 1; /* Takes available space */
-    max-width: 45%; /* Controls width */
-}
-
-.contact-card {
-    background: white;
-    padding: 20px;
-    max-width: 500px; /* Adjust width */
-    margin: 20px auto; /* Center the card */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid #aaa; /* Add a border */
-    flex: 1; /* Takes available space */
     
-}
-
-.contact-card p {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the form elements */
-    width: 100%; /* Ensure the form container takes full width */
-}
-
-.contact-form label {
-    margin-top: 1rem;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;  /* Reduce width */
-    font-size: 14px; /* Smaller text */
-    max-width: 350px; /* Prevent excessive stretching on large screens */
-    margin: 5px auto; /* Auto margins center it properly */
-    text-align: center;
-}
-.contact-form textarea {
-    height: 80px; /* Reduce textarea height */
-}
-
-.contact-form button {
+    /* Body Styling */
     
-    width: 80%;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    max-width: 300px; /* Prevent excessive stretching on large screens */
-    margin: 5px auto; /* Auto margins center it properly */
-    text-align: center;
-}
-
-.contact-form button:hover {
-    background-color: #555;
-}
-
-#form-status {
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    color: green;
-}
-
-/* Recommendations */
-.all_recommendations {
-    display: flex;
-    align-items: center;
-    margin-left: 1in;
-    flex-direction: row;
-    flex-flow: wrap;
-    padding: 20px;
-  }
-  
-  .recommendation {
-    font-style: italic;
-    text-align: left;
-    width: 21.875rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 11px;
-    box-shadow: 0 3px 10px var(--primary-shadow);
-    padding: 20px;
-    margin: 10px;
-    border:1px solid gray;
-    font-size: 14px;
-    height: 200px;
-    /*overflow-y: auto; /* Enables vertical scrolling if needed */
-  }
-  
-  .recommendation span {
-    color: #7600bc;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
-  }
-
-  .stars {
-    font-size: 18px;
-    color: gold; /* Makes the stars gold */
-    margin-bottom: 1px; /* Adds spacing between stars and the text */
-}
-
-
-/* Categories Section */
-#categories {
-    margin: 40px 0;
-}
-
-.category-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.category-box {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.category-box:hover {
-    background-color: #444;
-}
-
-/* Watches Section */
-.watch-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-.watch-item {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    max-width: 250px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.watch-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.watch-item p {
-    font-weight: bold;
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.watch-item span {
-    color: #d32f2f;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.watch-item:hover {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-footer .social-media {
-    list-style: none;
-    padding: 0;
-  }
-  
-  footer .social-media li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  footer .social-media a {
-    display: block;
-    width: 40px;
-    height: 40px;
-  }
-  
-  footer .social-media img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  footer .social-media a:focus {
-    outline: 2px solid #ff6600; /* Change this color for better visibility */
-  }
-  @media (max-width: 600px) {
-    footer .social-media li {
-      margin: 0 5px;
+      body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+    
+    /* Header */
+    
+    header h1 {
+        font-size: 28px;
+        font-family:Cormorant Garamond;
+        
     }
-  }
+    /* Reset default browser styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    h2{
+        text-align: center;
+        color: #333;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+    header {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    /* Navbar Styling */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        list-style: none;
+        padding: 5px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+         background-color: #333;
+         color: white;
     }
 
-    .watch-container {
-        flex-direction: column;
-        align-items: center;
+    nav li {
+        margin: 0 15px; /* Space between links */
     }
 
-    .category-container {
-        flex-direction: column;
-        align-items: center;
+    nav a {
+        text-decoration: none;  
+        color: inherit;          
+        font-size: 18px;
+        font-weight: normal;    
+        transition: all 0.3s ease; 
     }
 
-    .category-box {
-        width: 80%;
+    /* On Hover */
+    nav a:hover {
+        font-weight: bold;  /* Make text bold on hover */
+           /* Keep the color same as the original (no blue) */
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+
+    .product-grid {
+        display: flex;
+         justify-content: space-evenly;
+    }
+    /* Ensure the navbar touches the top */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+  
+    
+    /* About Section Styling */
+    #about-section {
+        width: 85%; /* Make it a bit smaller */
+        max-width: 900px;
+        margin: 30px auto; /* Centering */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #about-section h2 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 5px;
+    }
+    
+    #about-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        text-align: justify; /* Makes it look neat */
+    }
+    
+    /* Add spacing between paragraphs */
+    #about-section p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    
+    /* Mission Section Styling */
+    #mission-section {
+        width: 85%; /* Make it a bit smaller */
+        max-width: 900px;
+        margin: 30px auto; /* Centering */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #mission-section h2 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 5px;
+    }
+    
+    #mission-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        text-align: justify; /* Makes it look neat */
+    }
+    
+    /* Add spacing between paragraphs */
+    #mission-section p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    /* Customer Section Styling */
+    #customer-section {
+        width: 85%; /* Make it a bit smaller */
+        max-width: 900px;
+        margin: 30px auto; /* Centering */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #customer-section h2 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 5px;
+    }
+    
+    #customer-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        text-align: justify; /* Makes it look neat */
+    }
+    
+    /* Add spacing between paragraphs */
+    #customer-section p:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    
+    
+    /* Objectives Section Styling */
+    #objectives-section {
+        width: 85%; /* Make it a bit smaller */
+        max-width: 900px;
+        margin: 30px auto; /* Centering */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #objectives-section h2 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 5px;
+    }
+    #objectives-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        text-align: justify; /* Makes it look neat */
+    }
+    #objectives-section ul {
+        list-style: none; /* Removes default bullets */
+        padding: 0;
+        margin: 15px 0;
+    }
+    
+    #objectives-section ul li {
+        position: flex;
+        /*padding-left: 22px; /* Space for custom bullet */
+        /*margin-bottom: 10px;*/
+        align-items: center; /* Vertically centers them */
+        gap: 8px; /* Adjusts space between tick and text */
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+    }
+    
+    #objectives-section ul li::before {
+        content: "✔"; /* Custom bullet (can be changed) */
+        /*position: absolute;
+        left: 0;
+        top: 0px;*/
+        font-size: 18px;
+        color: #c09f77; /* Gold color for luxury feel */
+        font-weight: bold;
+    }
+    
+    /* Locations Section Styling */
+    #locations-section {
+        width: 85%; /* Make it a bit smaller */
+        max-width: 900px;
+        margin: 30px auto; /* Centering */
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #locations-section h2 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #222;
+        padding-bottom: 5px;
+    }
+    #locations-section p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        text-align: justify; /* Makes it look neat */
+    }
+    #locations-section ul {
+        list-style: none; /* Removes default bullets */
+        padding: 0;
+        margin: 15px 0;
+    }
+    
+    #locations-section ul li {
+        position: flex;
+        /*padding-left: 22px; /* Space for custom bullet */
+        /*margin-bottom: 10px;*/
+        align-items: center; /* Vertically centers them */
+        gap: 8px; /* Adjusts space between tick and text */
+        font-size: 16px;
+        color: #444;
+        line-height: 1.6;
+    }
+    
+    #locations-section ul li::before {
+        content: "✔"; /* Custom bullet (can be changed) */
+        /*position: absolute;
+        left: 0;
+        top: 0px;*/
+        font-size: 18px;
+        color: #c09f77; /* Gold color for luxury feel */
+        font-weight: bold;
+    }
+    
+    
+    /* Pop-up styles */
+    .popup {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #222;
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        text-align: center;
+        min-width: 250px;
+        max-width: 90%;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    /* Different colors for success and error */
+    .popup.success {
+        background: grey;
+    }
+    
+    .popup.error {
+        background: #dc3545;
+    }
+    
+    /* OK Button */
+    .popup-button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background: #fff;
+        color: #222;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .popup-button:hover {
+        background: #ddd;
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+    
+    
+     /* Search Bar Styling */
+    .search-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #searchBar {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .store-list {
+        list-style: none;
+        padding: 0;
         text-align: center;
     }
-}
-html {
-    scroll-behavior: smooth;
-}
-.container a {
-    color: white;
-}
+    .store-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 5px auto;
+        border-radius: 5px;
+        background: #f9f9f9;
+        width: 80%;
+        max-width: 400px;
+    }
+    
+    .contact-section {
+        background-color: white;
+        padding: 2rem;
+        max-width: 600px;
+        margin: 3rem auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    .contact-container {
+        display: flex; /* Arrange items side by side */
+        justify-content: space-between; /* Add spacing between elements */
+        align-items: flex-start; /* Align items to the top */
+        gap: 20px; /* Space between elements */
+        max-width: 1000px; /* Adjust width */
+        margin: 3rem auto; /* Center the section */
+        padding: 20px;
+    }
+    .contact-info {
+        flex: 1; /* Takes available space */
+        max-width: 45%; /* Controls width */
+    }
+    
+    .contact-card {
+        background: white;
+        padding: 20px;
+        max-width: 500px; /* Adjust width */
+        margin: 20px auto; /* Center the card */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        border: 1px solid #aaa; /* Add a border */
+        flex: 1; /* Takes available space */
+        
+    }
+    
+    .contact-card p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the form elements */
+        width: 100%; /* Ensure the form container takes full width */
+    }
+    
+    .contact-form label {
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%;  /* Reduce width */
+        font-size: 14px; /* Smaller text */
+        max-width: 350px; /* Prevent excessive stretching on large screens */
+        margin: 5px auto; /* Auto margins center it properly */
+        text-align: center;
+    }
+    .contact-form textarea {
+        height: 80px; /* Reduce textarea height */
+    }
+    
+    .contact-form button {
+        
+        width: 80%;
+        padding: 10px;
+        font-size: 14px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        max-width: 300px; /* Prevent excessive stretching on large screens */
+        margin: 5px auto; /* Auto margins center it properly */
+        text-align: center;
+    }
+    
+    .contact-form button:hover {
+        background-color: #555;
+    }
+    
+    #form-status {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        color: green;
+    }
+    
+    /* Recommendations */
+    .all_recommendations {
+        display: flex;
+        align-items: center;
+        margin-left: 1in;
+        flex-direction: row;
+        flex-flow: wrap;
+        padding: 20px;
+      }
+      
+      .recommendation {
+        font-style: italic;
+        text-align: left;
+        width: 21.875rem;
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 11px;
+        box-shadow: 0 3px 10px var(--primary-shadow);
+        padding: 20px;
+        margin: 10px;
+        border:1px solid gray;
+        font-size: 14px;
+        height: 200px;
+        /*overflow-y: auto; /* Enables vertical scrolling if needed */
+      }
+      
+      .recommendation span {
+        color: #7600bc;
+        font-size: 22px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+    
+      .stars {
+        font-size: 18px;
+        color: gold; /* Makes the stars gold */
+        margin-bottom: 1px; /* Adds spacing between stars and the text */
+    }
+    
+    
+    /* Categories Section */
+    #categories {
+        margin: 40px 0;
+    }
+    
+    .category-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    
+    .category-box {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+    
+    .category-box:hover {
+        background-color: #444;
+    }
+    
+    /* Watches Section */
+    .watch-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .watch-item {
+        background-color: #fff;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        max-width: 250px;
+        text-align: center;
+        transition: 0.3s;
+    }
+    
+    .watch-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .watch-item p {
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    .watch-item span {
+        color: #d32f2f;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .watch-item:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Footer */
+    footer {
+        background-color: #222;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    footer .social-media {
+        list-style: none;
+        padding: 0;
+      }
+      
+      footer .social-media li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      
+      footer .social-media a {
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+      
+      footer .social-media img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      footer .social-media a:focus {
+        outline: 2px solid #ff6600; /* Change this color for better visibility */
+      }
+      @media (max-width: 600px) {
+        footer .social-media li {
+          margin: 0 5px;
+        }
+      }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .watch-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .category-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .category-box {
+            width: 80%;
+            text-align: center;
+        }
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    .container a {
+        color: white;
+    }
+    
+    .container a:hover {
+        color: blue;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 0px 10px gray;
+        border-radius: 10px;
+    }
+    
+    .modal.show {
+        display: block;
+    }
+    #recommendations {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: auto;
+    }
 
-.container a:hover {
-    color: blue;
-}
+    h2, h3 {
+        font-size: 2rem;
+        color: #333;
+    }
 
-.modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px gray;
-    border-radius: 10px;
-}
+    p {
+        font-size: 1rem;
+        color: #555;
+    }
 
-.modal.show {
-    display: block;
-}
+    /* Reviews Section */
+    .all_recommendations {
+        margin-top: 20px;
+    }
+
+    .recommendation {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .stars {
+        color: #ff9900;
+        font-size: 1.2rem;
+    }
+
+    /* Add Review Section */
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    select, textarea {
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    /* Popup Message */
+    #popupMessage {
+        display: none;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
