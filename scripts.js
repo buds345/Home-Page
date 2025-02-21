@@ -62,7 +62,7 @@ function showPopup(message, type) {
     document.body.appendChild(popup);
 }
 //Location
-<script>
+
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
@@ -81,7 +81,7 @@ function showPopup(message, type) {
             alert("Geolocation is not supported by this browser.");
         }
     }
-</script>
+
 
 // Store Search Functionality
 const stores = [
