@@ -30,7 +30,7 @@
         /* Navbar Styling */
         nav ul {
             list-style: none;
-            padding: 0;
+            padding: 5px;
             margin: 0;
             display: flex;
             justify-content: center;
@@ -182,7 +182,7 @@
 </head>
 <body>
        <header>
-        <h1>QUADS JEWELLERS</h1>
+        <h1 >QUADS JEWELLERS</h1>
         <p>Elegant Timepieces for Every Occasion</p>
     </header>
 
@@ -223,7 +223,7 @@
     <h2  style="text-align: center;">Check out our Valentin's discount!!</h2>
     <div class="product-grid">
         <div class="product-card">
-            <img src="images/watch11.jpg" alt="Watch 11">
+            <img src="images/photo3.png" alt="Watch 11">
             <h3>Classic Watch</h3>
             <p style="padding-right: 15px; color: red;">R249.99</p>
             <p id="price1" style="text-decoration: line-through; color: black;">$299.99</p>
@@ -254,6 +254,54 @@
             
             <a href="product-details.html" class="cta-button">View Product</a>
         </div>
+    </div>
+</section>
+<section id="recommendations">
+    <h2>Reviews</h2>
+   
+    <div style="clear:both;"></div>
+    <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+            <div class="stars">★★★★★</div>
+            <span>&#8220;</span>
+            Stunning collection! Bought an automatic watch—quality is top-notch.
+            <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+            <div class="stars">★★★★☆</div>
+            <span>&#8220;</span>
+            Elegant store with great watches. Staff was friendly but service was slow.
+            <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+            <div class="stars">★★★☆☆</div>
+            <span>&#8220;</span>
+            Good selection, but customer service needs improvement.
+            <span>&#8221;</span>
+        </div>
+    </div>
+
+    <!-- Add Review Section -->
+    <h3>Add Your Review</h3>
+    <form id="reviewForm">
+        <label for="rating">Rating:</label>
+        <select id="rating" required>
+            <option value="★★★★★">★★★★★</option>
+            <option value="★★★★☆">★★★★☆</option>
+            <option value="★★★☆☆">★★★☆☆</option>
+            <option value="★★☆☆☆">★★☆☆☆</option>
+            <option value="★☆☆☆☆">★☆☆☆☆</option>
+        </select>
+
+        <label for="reviewText">Your Review:</label>
+        <textarea id="reviewText" rows="3" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <!-- Popup Message -->
+    <div id="popupMessage" style="display:none; padding: 10px; background: #4CAF50; color: white; text-align: center; margin-top: 10px;">
+        Review submitted successfully!
     </div>
 </section>
 
