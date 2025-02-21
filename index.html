@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General page styling */
-       body {
-    font-family: Arial, sans-serif;
-    background-image: url('images/pro3.png.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
         header {
             background-color: black;
@@ -184,16 +181,6 @@
             background-color: #45a049;
         }
 
-        /* Popup Message */
-        #popupMessage {
-            display: none;
-            padding: 10px;
-            background: #4CAF50;
-            color: white;
-            text-align: center;
-            margin-top: 10px;
-        }
-
         /* Footer Styling */
         footer {
             background-color: #222;
@@ -257,9 +244,47 @@
         </ul>
     </nav>
 
+    <section id="featured-products">
+        <h2 style="text-align: center;">Featured Watches</h2>
+        <div class="slideshow-container">
+            <img class="mySlides" src="images/photo7.png" alt="Luxury Watch 1">
+            <img class="mySlides" src="images/photo1.png" alt="Luxury Watch 2">
+            <img class="mySlides" src="images/photo2.png" alt="Luxury Watch 3">
+            <img class="mySlides" src="images/photo3.png" alt="Luxury Watch 4">
+            <img class="mySlides" src="images/photo4.png" alt="Luxury Watch 7">
+            <img class="mySlides" src="images/photo5.png" alt="Luxury Watch 8">
+            <img class="mySlides" src="images/photo6.png" alt="Luxury Watch 9">
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+    </section>
+
+    <section id="discount-products">
+        <h2 style="text-align: center;">Check out our Valentin's discount!!</h2>
+        <div class="product-grid">
+            <!-- Product Cards -->
+            <div class="product-card">
+                <img src="images/photo3.png" alt="Watch 11">
+                <h3>Classic Watch</h3>
+                <p style="padding-right: 15px; color: red;">R249.99</p>
+                <p id="price1" style="text-decoration: line-through; color: black;">$299.99</p>
+                <a href="product-details.html" class="cta-button">View Product</a>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+    </section>
+
     <section id="recommendations">
         <h2>Reviews</h2>
-        <div class="all_recommendations" id="reviewsList">
+        <div class="all_recommendations">
             <div class="recommendation">
                 <div class="stars">★★★★★</div>
                 <span>&#8220;</span> Stunning collection! Bought an automatic watch—quality is top-notch. <span>&#8221;</span>
@@ -291,7 +316,9 @@
             <button type="submit">Submit Review</button>
         </form>
 
-        <div id="popupMessage">Review submitted successfully!</div>
+        <div id="popupMessage" style="display:none; padding: 10px; background: #4CAF50; color: white; text-align: center; margin-top: 10px;">
+            Review submitted successfully!
+        </div>
     </section>
 
     <footer>
@@ -312,37 +339,25 @@
     </footer>
 
     <script>
-        // Handle form submission
-        document.getElementById('reviewForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        let slideIndex = 0;
+        showSlides();
 
-            // Get the rating and review text from the form
-            const rating = document.getElementById('rating').value;
-            const reviewText = document.getElementById('reviewText').value;
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
 
-            // Create a new recommendation card
-            const newRecommendation = document.createElement('div');
-            newRecommendation.classList.add('recommendation');
-            newRecommendation.innerHTML = `
-                <div class="stars">${rating}</div>
-                <span>&#8220;</span> ${reviewText} <span>&#8221;</span>
-            `;
-
-            // Add the new recommendation to the list
-            const reviewsList = document.getElementById('reviewsList');
-            reviewsList.appendChild(newRecommendation);
-
-            // Show the popup message
-            const popupMessage = document.getElementById('popupMessage');
-            popupMessage.style.display = 'block';
-
-            // Hide the popup after 3 seconds
-            setTimeout(function() {
-                popupMessage.style.display = 'none';
-            }, 3000);
-
-            // Clear the form
-            document.getElementById('reviewForm').reset();
-        });
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 2000); // Reduced timeout to 2 seconds
+        }
     </script>
 </body>
+</html>
