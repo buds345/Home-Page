@@ -256,25 +256,26 @@
         </div>
     </div>
 </section>
-<section id="recommendations">
-    <h2>Reviews</h2>
-   
+<section id="recommendations" style="font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; border-radius: 8px; max-width: 800px; margin: auto;">
+    <h2 style="font-size: 2rem; color: #333;">Reviews</h2>
+    <p style="font-size: 1rem; color: #555;">See some of our client reviews:</p>
     <div style="clear:both;"></div>
-    <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-            <div class="stars">★★★★★</div>
+    
+    <div class="all_recommendations" id="all_recommendations" style="margin-top: 20px;">
+        <div class="recommendation" style="background-color: #fff; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div class="stars" style="color: #ff9900; font-size: 1.2rem;">★★★★★</div>
             <span>&#8220;</span>
             Stunning collection! Bought an automatic watch—quality is top-notch.
             <span>&#8221;</span>
         </div>
-        <div class="recommendation">
-            <div class="stars">★★★★☆</div>
+        <div class="recommendation" style="background-color: #fff; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div class="stars" style="color: #ff9900; font-size: 1.2rem;">★★★★☆</div>
             <span>&#8220;</span>
             Elegant store with great watches. Staff was friendly but service was slow.
             <span>&#8221;</span>
         </div>
-        <div class="recommendation">
-            <div class="stars">★★★☆☆</div>
+        <div class="recommendation" style="background-color: #fff; padding: 15px; margin-bottom: 10px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <div class="stars" style="color: #ff9900; font-size: 1.2rem;">★★★☆☆</div>
             <span>&#8220;</span>
             Good selection, but customer service needs improvement.
             <span>&#8221;</span>
@@ -282,10 +283,10 @@
     </div>
 
     <!-- Add Review Section -->
-    <h3>Add Your Review</h3>
-    <form id="reviewForm">
-        <label for="rating">Rating:</label>
-        <select id="rating" required>
+    <h3 style="font-size: 1.5rem; color: #333; margin-top: 30px;">Add Your Review</h3>
+    <form id="reviewForm" style="background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <label for="rating" style="font-size: 1rem; color: #333;">Rating:</label>
+        <select id="rating" required style="padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; width: 100%;">
             <option value="★★★★★">★★★★★</option>
             <option value="★★★★☆">★★★★☆</option>
             <option value="★★★☆☆">★★★☆☆</option>
@@ -293,14 +294,16 @@
             <option value="★☆☆☆☆">★☆☆☆☆</option>
         </select>
 
-        <label for="reviewText">Your Review:</label>
-        <textarea id="reviewText" rows="3" required></textarea>
+        <label for="reviewText" style="font-size: 1rem; color: #333;">Your Review:</label>
+        <textarea id="reviewText" rows="3" required style="padding: 8px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; width: 100%;"></textarea>
 
-        <button type="submit">Submit Review</button>
+        <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">
+            Submit Review
+        </button>
     </form>
 
     <!-- Popup Message -->
-    <div id="popupMessage" style="display:none; padding: 10px; background: #4CAF50; color: white; text-align: center; margin-top: 10px;">
+    <div id="popupMessage" style="display:none; padding: 10px; background: #4CAF50; color: white; text-align: center; margin-top: 10px; border-radius: 4px;">
         Review submitted successfully!
     </div>
 </section>
