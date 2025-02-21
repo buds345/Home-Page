@@ -61,12 +61,6 @@ function showPopup(message, type) {
     // Add pop-up to body
     document.body.appendChild(popup);
 }
-// WhatsApp
-function shareOnWhatsApp(name, price) {
-    const message = Check out this amazing watch: ${name} for just ${price}! Available now at Quad Jewellers.;
-    const url = encodeURIComponent(message);
-    window.open(https://api.whatsapp.com/send?text=${url}, '_blank');
-}
 
 // Store Search Functionality
 const stores = [
