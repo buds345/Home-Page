@@ -131,7 +131,12 @@ document.getElementById("reviewForm").addEventListener("submit", function(event)
     // Create new review element
     let newReview = document.createElement("div");
     newReview.classList.add("recommendation");
-    newReview.innerHTML = `<div class="stars">${rating}</div>
+    newReview.style.backgroundColor = "#fff";
+    newReview.style.padding = "15px";
+    newReview.style.marginBottom = "10px";
+    newReview.style.borderRadius = "6px";
+    newReview.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
+    newReview.innerHTML = `<div class="stars" style="color: #ff9900; font-size: 1.2rem;">${rating}</div>
                            <span>&#8220;</span> ${reviewText} <span>&#8221;</span>`;
 
     // Add new review at the TOP of the list
@@ -150,5 +155,3 @@ document.getElementById("reviewForm").addEventListener("submit", function(event)
     // Clear form
     document.getElementById("reviewForm").reset();
 });
-
-
