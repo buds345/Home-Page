@@ -15,26 +15,30 @@
         }
 
         header {
-            background-color: black;
-            color: white;
+            background-color: #000;
+            color: #fff;
             text-align: center;
             padding: 30px 0;
         }
 
-        
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
 
         header p {
             font-size: 1.2rem;
+            margin: 5px 0;
         }
 
         /* Navbar Styling */
         nav ul {
             list-style: none;
-            padding: 5px;
+            padding: 10px;
             margin: 0;
             display: flex;
             justify-content: center;
-             
+            background-color: #333;
         }
 
         nav li {
@@ -42,65 +46,133 @@
         }
 
         nav a {
-            text-decoration: none;  
-            color: inherit;          
+            text-decoration: none;
+            color: #fff;
             font-size: 18px;
-            font-weight: normal;    
-            transition: all 0.3s ease; 
+            font-weight: normal;
+            transition: all 0.3s ease;
         }
 
-        /* On Hover */
         nav a:hover {
-            font-weight: bold;  /* Make text bold on hover */
-            color: white;     /* Keep the color same as the original (no blue) */
+            font-weight: bold;
+            color: #f4f4f4;
         }
 
-        /* Slideshow container */
+        /* Featured Products Section */
+        #featured-products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Slideshow styling */
         .slideshow-container {
             position: relative;
-            max-width: 600px;
+            max-width: 100%;
             margin: auto;
             overflow: hidden;
         }
 
-
-        .product-grid {
-            display: flex;
-             justify-content: space-evenly;
-        }
-        .all_recommendations{
-             display: flex;
-             justify-content: space-evenly;
-        }
-     
-        }
-        /* Hide all slides initially */
         .mySlides {
             display: none;
-            width: 100%; /* Full width of the container */
-            height: 400px; /* Fixed height for equal sizing */
-            object-fit: cover; /* Ensures images cover the container without stretching */
-            transition: opacity 1s ease-in-out; /* Smooth transition */
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
 
-        /* Dots container */
-        .dots-container {
+        /* Product Grid Layout */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            color: #333;
             margin-top: 10px;
         }
 
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        .product-card p#price {
+            font-size: 1rem;
+            color: red;
         }
 
-        .dot.active {
-            background-color: #717171;
+        .product-card p#price-old {
+            text-decoration: line-through;
+            color: #777;
+        }
+
+        .cta-button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Reviews Section */
+        #recommendations {
+            padding: 40px 20px;
+        }
+
+        .all_recommendations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+        }
+
+        .recommendation {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .stars {
+            color: #ff9900;
+            font-size: 1.2rem;
+        }
+
+        .recommendation span {
+            font-style: italic;
+            color: #555;
         }
 
         /* Footer Styling */
@@ -110,37 +182,6 @@
             text-align: center;
             padding: 20px 0;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .col {
-            text-align: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        footer a:hover {
-            color: blue;
         }
 
         .footer-content {
@@ -170,25 +211,11 @@
             height: 100%;
             display: block;
         }
-
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        footer {
-            margin-top: auto;
-        }
-
     </style>
 </head>
 <body>
-       <header>
-        <h1 >QUADS JEWELLERS</h1>
+    <header>
+        <h1>QUADS JEWELLERS</h1>
         <p>Elegant Timepieces for Every Occasion</p>
     </header>
 
@@ -201,146 +228,65 @@
         </ul>
     </nav>
 
-
     <section id="featured-products">
-        <h2 style="text-align: center;">Featured Watches</h2>
+        <h2>Featured Watches</h2>
 
         <div class="slideshow-container">
             <img class="mySlides" src="images/photo7.png" alt="Luxury Watch 1">
             <img class="mySlides" src="images/photo1.png" alt="Luxury Watch 2">
             <img class="mySlides" src="images/photo2.png" alt="Luxury Watch 3">
-            <img class="mySlides" src="images/photo3.png" alt="Luxury Watch 4">
-            <img class="mySlides" src="images/photo4.png" alt="Luxury Watch 7">
-            <img class="mySlides" src="images/photo5.png" alt="Luxury Watch 8">
-            <img class="mySlides" src="images/photo6.png" alt="Luxury Watch 9">
-        </div>
-
-        <div class="dots-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
         </div>
     </section>
+
     <section id="discount-products">
-    <h2  style="text-align: center;">Check out our Valentin's discount!!</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="images/photo3.png" alt="Watch 11">
-            <h3>Classic Watch</h3>
-            <p style="padding-right: 15px; color: red;">R249.99</p>
-            <p id="price1" style="text-decoration: line-through; color: black;">$299.99</p>
-           
-            <a href="product-details.html" class="cta-button">View Product</a>
+        <h2 style="text-align: center;">Check out our Valentine’s Discount!!</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/photo3.png" alt="Watch 1">
+                <h3>Classic Watch</h3>
+                <p id="price" style="color: red;">R249.99</p>
+                <p id="price-old">$299.99</p>
+                <a href="product-details.html" class="cta-button">View Product</a>
+            </div>
+            <div class="product-card">
+                <img src="images/watch2.jpg" alt="Watch 2">
+                <h3>Sport Watch</h3>
+                <p id="price" style="color: red;">R199.99</p>
+                <p id="price-old">$249.99</p>
+                <a href="product-details.html" class="cta-button">View Product</a>
+            </div>
         </div>
-        <div class="product-card">
-            <img src="images/watch2.jpg" alt="Watch 2">
-            <h3>Sport Watch</h3>
-            <p style="padding-right: 15px; color: red;">R199.99</p>
-            <p id="price1" style="text-decoration: line-through; color: black;">$249.99</p>
-            
-            <a href="product-details.html" class="cta-button">View Product</a>
-        </div>
-         <div class="product-card">
-            <img src="images/watch7.jpg" alt="Watch 1">
-            <h3>Classic Watch</h3>
-            <p style="padding-right: 15px; color: red;">R249.99</p>
-            <p id="price1" style="text-decoration: line-through; color: black;">$299.99</p>
-           
-            <a href="product-details.html" class="cta-button">View Product</a>
-        </div>
-        <div class="product-card">
-            <img src="images/watch3.jpg" alt="Watch 2">
-            <h3>Sport Watch</h3>
-            <p style="padding-right: 15px; color: red;">R199.99</p>
-            <p id="price1" style="text-decoration: line-through; color: black;">$249.99</p>
-            
-            <a href="product-details.html" class="cta-button">View Product</a>
-        </div>
-    </div>
-</section>
-<section id="recommendations">
-    <h2>Reviews</h2>
-   
-    <div style="clear:both;"></div>
-    <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-            <div class="stars">★★★★★</div>
-            <span>&#8220;</span>
-            Stunning collection! Bought an automatic watch—quality is top-notch.
-            <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-            <div class="stars">★★★★☆</div>
-            <span>&#8220;</span>
-            Elegant store with great watches. Staff was friendly but service was slow.
-            <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-            <div class="stars">★★★☆☆</div>
-            <span>&#8220;</span>
-            Good selection, but customer service needs improvement.
-            <span>&#8221;</span>
-        </div>
-    </div>
+    </section>
 
-    <!-- Add Review Section -->
-    <h3>Add Your Review</h3>
-    <form id="reviewForm">
-        <label for="rating">Rating:</label>
-        <select id="rating" required>
-            <option value="★★★★★">★★★★★</option>
-            <option value="★★★★☆">★★★★☆</option>
-            <option value="★★★☆☆">★★★☆☆</option>
-            <option value="★★☆☆☆">★★☆☆☆</option>
-            <option value="★☆☆☆☆">★☆☆☆☆</option>
-        </select>
-
-        <label for="reviewText">Your Review:</label>
-        <textarea id="reviewText" rows="3" required></textarea>
-
-        <button type="submit">Submit Review</button>
-    </form>
-
-    <!-- Popup Message -->
-    <div id="popupMessage" style="display:none; padding: 10px; background: #4CAF50; color: white; text-align: center; margin-top: 10px;">
-        Review submitted successfully!
-    </div>
-</section>
-
+    <section id="recommendations">
+        <h2>Client Reviews</h2>
+        <div class="all_recommendations" id="all_recommendations">
+            <div class="recommendation">
+                <div class="stars">★★★★★</div>
+                <span>&#8220;</span>
+                Stunning collection! Bought an automatic watch—quality is top-notch.
+                <span>&#8221;</span>
+            </div>
+            <div class="recommendation">
+                <div class="stars">★★★★☆</div>
+                <span>&#8220;</span>
+                Elegant store with great watches. Staff was friendly but service was slow.
+                <span>&#8221;</span>
+            </div>
+        </div>
+    </section>
 
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <a href="footerInfo.html#Refunds;">Refunds policy</a>
-          </div>
-          <div class="col">
-            <a href="footerInfo.html#terms">Terms and conditions</a>
-          </div>
-          <div class="col">
-            <a href="contact.html">©2025, Quad Jewellers Products</a>
-          </div>
-        </div>
-      </div>
-          <div class="footer-content">
+        <div class="footer-content">
             <ul class="social-media">
-              <li><a href="https://x.com/?lang=en-za&mx=2" target="_blank" aria-label="Follow us on Twitter">
-                <img src="images/twitter.jfif" alt="" role="presentation">
-              </a></li>
-              <li><a href="https://www.facebook.com/login.php/" target="_blank" aria-label="Follow us on Facebook">
-                <img src="images/Facebook_logo.jpeg" alt="" role="presentation">
-              </a></li>
-              <li><a href="https://www.instagram.com/accounts/login/" target="_blank" aria-label="Follow us on Instagram">
-                <img src="images/instagram.jfif" alt="" role="presentation">
-              </a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="images/twitter.jfif" alt="Twitter"></a></li>
+                <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.jfif" alt="Facebook"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="images/instagram.jfif" alt="Instagram"></a></li>
             </ul>
-          </div>
+        </div>
     </footer>
-<script>
+
+    <script>
         let slideIndex = 0;
         showSlides();
 
@@ -348,19 +294,18 @@
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
             for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
+                slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
+            if (slideIndex > slides.length) { slideIndex = 1 }
 
             for (let i = 0; i < dots.length; i++) {
                 dots[i].classList.remove("active");
             }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].classList.add("active");
-            setTimeout(showSlides, 2000); // Reduced timeout to 2 seconds
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 2000);
         }
     </script>
-    
 </body>
 </html>
