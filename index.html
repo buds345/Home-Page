@@ -6,7 +6,7 @@
     <title>Home - QUADS JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General page styling */
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -21,10 +21,6 @@
             padding: 30px 0;
         }
 
-        header p {
-            font-size: 1.2rem;
-        }
-
         /* Navbar Styling */
         nav ul {
             list-style: none;
@@ -32,6 +28,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            background-color: #222;
         }
 
         nav li {
@@ -40,17 +37,18 @@
 
         nav a {
             text-decoration: none;
-            color: inherit;
+            color: white;
             font-size: 18px;
+            padding: 10px;
             transition: all 0.3s ease;
         }
 
         nav a:hover {
-            font-weight: bold;
-            color: white;
+            background-color: #4CAF50;
+            border-radius: 5px;
         }
 
-        /* Slideshow container */
+        /* Slideshow Styling */
         .slideshow-container {
             position: relative;
             max-width: 600px;
@@ -58,19 +56,49 @@
             overflow: hidden;
         }
 
-        /* Hide all slides initially */
         .mySlides {
             display: none;
             width: 100%;
             height: 400px;
             object-fit: cover;
-            transition: opacity 1s ease-in-out;
         }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .prev { left: 0; }
+        .next { right: 0; }
+
+        .dots-container {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px;
+            background-color: gray;
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active { background-color: #4CAF50; }
 
         /* Product Grid */
         .product-grid {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             gap: 20px;
             padding: 20px;
         }
@@ -81,72 +109,55 @@
             text-align: center;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
-        .product-card img {
-            max-width: 65px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
+        .product-card:hover { transform: translateY(-5px); }
 
         .cta-button {
             background-color: #4CAF50;
             color: white;
             padding: 10px 20px;
             border: none;
-            text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
 
-        .cta-button:hover {
-            background-color: #45a049;
-        }
+        .cta-button:hover { background-color: #45a049; }
 
-        /* Recommendation Section */
-        #recommendations {
-            padding: 40px 20px;
+        /* Review Section */
+        #review-section {
             background-color: #f9f9f9;
-        }
-
-        .all_recommendations {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .recommendation {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 32%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .recommendation:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            padding: 40px 20px;
+            text-align: center;
         }
 
         .stars {
             color: #FFD700;
-            margin-bottom: 10px;
+            font-size: 20px;
+            cursor: pointer;
         }
 
-        #reviewForm {
-            margin-top: 30px;
+        .review-form {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
+            width: 50%;
+            margin: auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
         }
 
         /* Footer Styling */
@@ -155,37 +166,17 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: blue;
-        }
-
-        .social-media {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
         }
 
         .social-media img {
             width: 40px;
             height: 40px;
-            display: block;
+            margin: 0 5px;
         }
     </style>
 </head>
 <body>
+
     <header>
         <h1>QUADS JEWELLERS</h1>
         <p>Elegant Timepieces for Every Occasion</p>
@@ -193,56 +184,52 @@
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html">View Watches</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="javascript:void(0);" onclick="getLocation()">Nearby Stores</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">View Watches</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="https://www.google.com/maps/search/jewellery+stores+in+Port+Elizabeth" target="_blank">Nearby Stores</a></li>
         </ul>
     </nav>
 
     <section id="featured-products">
         <h2 style="text-align: center;">Featured Watches</h2>
         <div class="slideshow-container">
-            <img class="mySlides" src="images/photo7.png" alt="Luxury Watch 1">
-            <img class="mySlides" src="images/photo1.png" alt="Luxury Watch 2">
-            <img class="mySlides" src="images/photo2.png" alt="Luxury Watch 3">
+            <img class="mySlides" src="images/photo1.png" alt="Luxury Watch 1">
+            <img class="mySlides" src="images/photo2.png" alt="Luxury Watch 2">
+            <img class="mySlides" src="images/photo3.png" alt="Luxury Watch 3">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+        <div class="dots-container">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
         </div>
     </section>
 
-    <section id="discount-products">
-        <h2 style="text-align: center;">Valentine's Discount!</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/photo3.png" alt="Watch 11">
-                <h3>Classic Watch</h3>
-                <p style="color: red;">R249.99</p>
-                <p style="text-decoration: line-through; color: black;">$299.99</p>
-                <a href="product-details.html" class="cta-button">View Product</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="recommendations">
-        <h2>Reviews</h2>
-        <div class="all_recommendations">
-            <div class="recommendation"><div class="stars">★★★★★</div> "Great quality watches!"</div>
-            <div class="recommendation"><div class="stars">★★★★☆</div> "Friendly staff but slow service."</div>
-            <div class="recommendation"><div class="stars">★★★☆☆</div> "Good selection, but needs better customer service."</div>
+    <section id="review-section">
+        <h2>Customer Reviews</h2>
+        <div class="review-form">
+            <p>Rate our service:</p>
+            <span class="stars" onclick="setRating(1)">★</span>
+            <span class="stars" onclick="setRating(2)">★</span>
+            <span class="stars" onclick="setRating(3)">★</span>
+            <span class="stars" onclick="setRating(4)">★</span>
+            <span class="stars" onclick="setRating(5)">★</span>
+            <br>
+            <textarea placeholder="Write your review here..."></textarea>
+            <button class="submit-btn">Submit</button>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <a href="footerInfo.html#Refunds;">Refunds Policy</a> | 
-            <a href="footerInfo.html#terms">Terms & Conditions</a> |
-            <a href="contact.html">©2025, Quad Jewellers</a>
+        <p>&copy; 2025 QUADS JEWELLERS</p>
+        <div class="social-media">
+            <a href="#"><img src="images/twitter.jfif" alt="Twitter"></a>
+            <a href="#"><img src="images/Facebook_logo.jpeg" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.jfif" alt="Instagram"></a>
         </div>
-        <ul class="social-media">
-            <li><a href="#"><img src="images/twitter.jfif" alt="Twitter"></a></li>
-            <li><a href="#"><img src="images/Facebook_logo.jpeg" alt="Facebook"></a></li>
-            <li><a href="#"><img src="images/instagram.jfif" alt="Instagram"></a></li>
-        </ul>
     </footer>
 
     <script>
@@ -252,9 +239,10 @@
             for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
             slideIndex = (slideIndex + 1) % slides.length;
             slides[slideIndex].style.display = "block";
-            setTimeout(showSlides, 2000);
+            setTimeout(showSlides, 3000);
         }
         showSlides();
     </script>
+
 </body>
 </html>
