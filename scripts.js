@@ -61,6 +61,27 @@ function showPopup(message, type) {
     // Add pop-up to body
     document.body.appendChild(popup);
 }
+//Location
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                
+                // Construct the Google Maps search URL with user's current location
+                var mapUrl = "https://www.google.com/maps/search/jewellery+stores+near+" + lat + "," + lon;
+                
+                // Open the link in a new tab
+                window.open(mapUrl, "_blank");
+            }, function(error) {
+                alert("Geolocation error: " + error.message);
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+</script>
 
 // Store Search Functionality
 const stores = [
