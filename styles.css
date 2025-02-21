@@ -39,7 +39,7 @@ body, html {
 
 /* Navbar Styling */
 nav {
-    background-color: #000;  /* Make it the same black color */
+    background-color: #333;  /* Make it the same black color */
     text-align: center;
     padding: 10px 0; /* Adjust padding as needed */
     width: 100%;
