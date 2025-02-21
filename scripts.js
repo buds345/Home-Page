@@ -61,11 +61,6 @@ function showPopup(message, type) {
     // Add pop-up to body
     document.body.appendChild(popup);
 }
-//view details page
-function viewDetailsPage(productId) {
-    // Redirect to the details page with the product ID as a query parameter
-    window.location.href = productDetails.html?productId=${productId};
-}
 
 
 // Store Search Functionality
