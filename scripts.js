@@ -117,3 +117,34 @@ function showWatchDetails(name, price, stock, description) {
     alert(details);
 }
 
+document.getElementById("reviewForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page reload
+
+    // Get user input
+    let rating = document.getElementById("rating").value;
+    let reviewText = document.getElementById("reviewText").value;
+
+    // Create new review element
+    let newReview = document.createElement("div");
+    newReview.classList.add("recommendation");
+    newReview.innerHTML = `<div class="stars">${rating}</div>
+                           <span>&#8220;</span> ${reviewText} <span>&#8221;</span>`;
+
+    // Add new review at the TOP of the list
+    let reviewContainer = document.getElementById("all_recommendations");
+    reviewContainer.insertBefore(newReview, reviewContainer.firstChild);
+
+    // Show popup message
+    let popup = document.getElementById("popupMessage");
+    popup.style.display = "block";
+
+    // Hide popup after 3 seconds
+    setTimeout(function() {
+        popup.style.display = "none";
+    }, 3000);
+
+    // Clear form
+    document.getElementById("reviewForm").reset();
+});
+
+
