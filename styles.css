@@ -509,13 +509,13 @@
         margin: 10px;
         border:1px solid gray;
         font-size: 14px;
-        height: 300px;
+        height: 250px;
         /*overflow-y: auto; /* Enables vertical scrolling if needed */
       }
       
       .recommendation span {
         color: #7600bc;
-       text-align: center;
+       text-align: left;
         font-size: 15px;
         font-family: 'Times New Roman', Times, serif;
       }
