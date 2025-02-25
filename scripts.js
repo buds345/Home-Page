@@ -126,21 +126,21 @@ function handleSearch(event) {
 }
 
 //Modal Functionality
-function showWatchDetails(image, name, price, stock, description) {
-    document.getElementById("modal-image").src = image;
+function showWatchDetails(name, price, stock, description) {
     document.getElementById("modal-title").textContent = name;
     document.getElementById("modal-price").textContent = price;
     document.getElementById("modal-stock").textContent = stock;
     document.getElementById("modal-description").textContent = description;
 
+    document.getElementById("watchModal").style.display = "flex";
 }
 function openModal() {
     document.getElementById("watchModal").style.display = "flex";
 }
+
 function closeModal() {
     document.getElementById("watchModal").style.display = "none";
 }
-
 // Close modal when clicking outside the modal content
 window.onclick = function(event) {
     const modal = document.getElementById("watchModal");
