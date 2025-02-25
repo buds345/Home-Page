@@ -249,23 +249,32 @@ h3 {
 /* Style for the Popup */
 .popup {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 900px;
-    height: 260px.;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    width: 80%; /* Set the width to 80% of the screen (can adjust as needed) */
+    max-width: 600px; /* Max width to avoid it getting too wide */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .popup-content {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    max-width: 400px;
-    width: 80px;
-    text-align: center;
+    width: 100%; /* Ensure content takes the full width of the popup */
+    text-align: left;
+    overflow-y: auto; /* Allow scrolling for long descriptions */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+}
+
+#popupDescription {
+    display: block;
+    margin-top: 10px;
+    text-align: justify; /* Optional: for better text alignment */
 }
 
 .close-btn {
@@ -276,11 +285,6 @@ h3 {
     cursor: pointer;
 }
 
-.popup img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
 
 
 
