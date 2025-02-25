@@ -494,7 +494,7 @@
         margin-left: 1in;
         flex-direction: row;
         flex-flow: wrap;
-        padding: 20px;
+        padding: 10px;
       }
       
       .recommendation {
@@ -509,14 +509,14 @@
         margin: 10px;
         border:1px solid gray;
         font-size: 14px;
-        height: 250px;
+        height: 300px;
         /*overflow-y: auto; /* Enables vertical scrolling if needed */
       }
       
       .recommendation span {
         color: #7600bc;
        text-align: center;
-        font-size: 19px;
+        font-size: 15px;
         font-family: 'Times New Roman', Times, serif;
       }
     
