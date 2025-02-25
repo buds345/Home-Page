@@ -125,16 +125,31 @@ function handleSearch(event) {
     displayStores(filteredStores);
 }
 
+//Modal Functionality
 function showWatchDetails(name, price, stock, description) {
-    // Create a modal-like display or alert box
-    const details = `
-        Watch Name: ${name}\n
-        Price: ${price}\n
-        Stock Status: ${stock}\n
-        Description: ${description}
-    `;
-    alert(details);
+    document.getElementById("modal-title").textContent = name;
+    document.getElementById("modal-price").textContent = price;
+    document.getElementById("modal-stock").textContent = stock;
+    document.getElementById("modal-description").textContent = description;
+
+    document.getElementById("watchModal").style.display = "flex";
 }
+function openModal() {
+    document.getElementById("watchModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("watchModal").style.display = "none";
+}
+
+// Close modal when clicking outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById("watchModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+
 
 document.getElementById("reviewForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent page reload
