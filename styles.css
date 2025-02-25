@@ -515,6 +515,7 @@
       
       .recommendation span {
         color: #7600bc;
+       text-align: inline;
         font-size: 22px;
         font-family: 'Times New Roman', Times, serif;
       }
