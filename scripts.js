@@ -132,7 +132,7 @@ function showWatchDetails(image, name, price, stock, description) {
     document.getElementById("modal-price").textContent = price;
     document.getElementById("modal-stock").textContent = stock;
     document.getElementById("modal-description").textContent = description;
-    
+    document.getElementById("watchModal").style.display = "flex";
 
 }
 function openModal() {
