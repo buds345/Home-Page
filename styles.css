@@ -491,7 +491,7 @@
     .all_recommendations {
         display: flex;
         align-items: inline;
-        margin: 5px;
+        margin: 1px;
         gap: 10px;
         flex-direction: row;
         flex-flow: wrap;
