@@ -703,31 +703,38 @@
     }
 
         /* Recommendation Section */
-        #recommendations {
-            padding: 40px 20px;
-            background-color: #f9f9f9;
-        }
+       #recommendations {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
 
-        .all_recommendations {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+.all_recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0; /* Remove spacing to merge them into one block */
+    border: 2px solid #ccc; /* Outer border */
+    border-radius: 10px; /* Slight rounding for entire block */
+    overflow: hidden; /* Prevent overflow issues */
+}
 
-        .recommendation {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            width: 32%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.recommendation {
+    flex: 1 1 calc(33.33% - 2px); /* Equal width for 3 per row */
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-right: 2px solid #ccc; /* Vertical dividers */
+    border-bottom: 2px solid #ccc; /* Horizontal dividers */
+}
 
-        .recommendation:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
+.recommendation:nth-child(3n) {
+    border-right: none; /* Remove right border for last column */
+}
+
+.recommendation:last-child,
+.recommendation:nth-last-child(2),
+.recommendation:nth-last-child(3) {
+    border-bottom: none; /* Remove bottom border for last row */
+}
 
         .stars {
             color: #FFD700;
