@@ -136,7 +136,7 @@ function showWatchDetails(image, name, price, stock, description) {
 
 }
 function openModal() {
-    document.getElementById('watchModal').style.display = 'flex';
+    document.getElementById("watchModal").style.display = "flex";
 }
 function closeModal() {
     document.getElementById("watchModal").style.display = "none";
