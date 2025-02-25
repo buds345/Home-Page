@@ -489,7 +489,7 @@
     /* Recommendations */
     .all_recommendations {
         display: flex;
-        align-items: center;
+        align-items: inline;
         margin-left: 1in;
         flex-direction: row;
         flex-flow: wrap;
