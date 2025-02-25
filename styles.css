@@ -478,7 +478,13 @@
     .contact-form button:hover {
         background-color: #555;
     }
-    
+     #form-status {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        color: green;
+    }
    
     
     /* Recommendations */
