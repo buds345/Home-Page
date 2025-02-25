@@ -500,7 +500,7 @@
       .recommendation {
         font-style: italic;
         text-align: left;
-        width: 21.875rem;
+        width: 25px;
         padding: 1rem;
         background-color: #fff;
         border-radius: 11px;
@@ -509,14 +509,14 @@
         margin: 10px;
         border:1px solid gray;
         font-size: 14px;
-        height: 200px;
+        height: 250px;
         /*overflow-y: auto; /* Enables vertical scrolling if needed */
       }
       
       .recommendation span {
         color: #7600bc;
        text-align: center;
-        font-size: 22px;
+        font-size: 19px;
         font-family: 'Times New Roman', Times, serif;
       }
     
