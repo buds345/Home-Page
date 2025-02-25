@@ -488,37 +488,49 @@
    
     
     /* Recommendations */
-    .all_recommendations {
-        display: flex;
-        align-items: inline;
-        margin: 1px;
-    
-        padding: 10px;
-      }
-      
-      .recommendation {
-        font-style: italic;
-        text-align: left;
-        width: 15px;
-        padding: 1rem;
-        background-color: #fff;
-        border-radius: 11px;
-        box-shadow: 0 3px 10px var(--primary-shadow);
-        padding: 20px;
-        margin: 10px;
-        border:1px solid gray;
-        font-size: 14px;
-        height: 250px;
-        /*overflow-y: auto; /* Enables vertical scrolling if needed */
-      }
-      
-      .recommendation span {
-        color: #7600bc;
-       text-align: center;
-        font-size: 20px;
-        font-family: 'Times New Roman', Times, serif;
-      }
-    
+  #recommendations {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    max-width: 90%; /* Increase width */
+    margin: 0 auto; /* Center the section */
+}
+
+.all_recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; /* Make it as wide as possible */
+}
+
+.recommendation {
+    flex: 1 1 calc(33.33% - 2px); /* Adjust width for 3 per row */
+    min-width: 250px; /* Prevent them from getting too small */
+    background-color: #fff;
+    padding: 30px; /* Increase padding for a spacious feel */
+    text-align: center;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.recommendation:nth-child(3n) {
+    border-right: none; /* Remove right border for last in row */
+}
+
+.recommendation:last-child,
+.recommendation:nth-last-child(2),
+.recommendation:nth-last-child(3) {
+    border-bottom: none; /* Remove bottom border for last row */
+}
+
+/* Make sure the section stays wide even on larger screens */
+@media (min-width: 1200px) {
+    #recommendations {
+        max-width: 1200px;
+    }
+}
       .stars {
         font-size: 18px;
         color: gold; /* Makes the stars gold */
