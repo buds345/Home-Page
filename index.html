@@ -70,7 +70,7 @@ h3 {
         }
 
         .blinking-heading {
-            font-size: 2.5rem;
+            font-size: 20px;
             font-weight: bold;
             color: #ff6347; /* A bright color to grab attention */
             animation: blink 1s infinite; /* Blinks every second */
@@ -245,6 +245,45 @@ h3 {
         footer {
             margin-top: auto;
         }
+/* Pop-up Modal Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+/* Background Overlay */
+.popup.show {
+    display: block;
+}
 
     </style>
 </head>
@@ -291,37 +330,34 @@ h3 {
         <h2 class="blinking-heading">🔥 Get 20% Off on All Discount Products! 🔥</h2>
 <div class="product-grid">
     <div class="product-card">
-        <img src="images/photo3.png" alt="Classic Watch">
+        <img src="images/photo3.png" alt="Classic Watch" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99', 'images/photo3.png')">
         <h3>Classic Watch</h3>
         <p class="sale-price">R249.99</p>
         <p class="original-price">R299.99</p>
-        <a href="product-details.html" class="cta-button">View Product</a>
+        <button class="cta-button" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99', 'images/photo3.png')">View Product</button>
     </div>
 
     <div class="product-card">
-        <img src="images/watch2.jpg" alt="Sport Watch">
+        <img src="images/watch2.jpg" alt="Sport Watch" onclick="showPopup('Sport Watch', 'R199.99', 'R249.99', 'images/watch2.jpg')">
         <h3>Sport Watch</h3>
         <p class="sale-price">R199.99</p>
         <p class="original-price">R249.99</p>
-        <a href="product-details.html" class="cta-button">View Product</a>
-    </div>
-
-    <div class="product-card">
-        <img src="https://github.com/buds345/Home-Page/blob/main/images/photo4.png?raw=true" alt="Classic Watch">
-        <h3>Classic Watch</h3>
-        <p class="sale-price">R249.99</p>
-        <p class="original-price">R299.99</p>
-        <a href="product-details.html" class="cta-button">View Product</a>
-    </div>
-
-    <div class="product-card">
-        <img src="https://github.com/buds345/Home-Page/blob/main/images/photo7.png?raw=true" alt="Sport Watch">
-        <h3>Sport Watch</h3>
-        <p class="sale-price">R199.99</p>
-        <p class="original-price">R249.99</p>
-        <a href="product-details.html" class="cta-button">View Product</a>
+        <button class="cta-button" onclick="showPopup('Sport Watch', 'R199.99', 'R249.99', 'images/watch2.jpg')">View Product</button>
     </div>
 </div>
+
+<!-- Pop-up Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popup-image" src="" alt="Product Image">
+        <h2 id="popup-title"></h2>
+        <p class="sale-price" id="popup-sale-price"></p>
+        <p class="original-price" id="popup-original-price"></p>
+    </div>
+</div>
+
+ 
 
 </section>
 
@@ -450,11 +486,11 @@ function showPopup(title, salePrice, originalPrice, imageUrl) {
     document.getElementById('popup-original-price').innerText = originalPrice;
     document.getElementById('popup-image').src = imageUrl;
 
-    document.getElementById('popup').style.display = "block";
+    document.getElementById('popup').classList.add("show");
 }
 
 function closePopup() {
-    document.getElementById('popup').style.display = "none";
+    document.getElementById('popup').classList.remove("show");
 }
 
     
