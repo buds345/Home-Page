@@ -488,49 +488,26 @@
    
     
     /* Recommendations */
-  #recommendations {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    max-width: 90%; /* Increase width */
-    margin: 0 auto; /* Center the section */
-}
+ .all_recommendations {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.all_recommendations {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%; /* Make it as wide as possible */
-}
+        .recommendation {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 32%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.recommendation {
-    flex: 1 1 calc(33.33% - 2px); /* Adjust width for 3 per row */
-    min-width: 250px; /* Prevent them from getting too small */
-    background-color: #fff;
-    padding: 30px; /* Increase padding for a spacious feel */
-    text-align: center;
-    border-right: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-}
-
-.recommendation:nth-child(3n) {
-    border-right: none; /* Remove right border for last in row */
-}
-
-.recommendation:last-child,
-.recommendation:nth-last-child(2),
-.recommendation:nth-last-child(3) {
-    border-bottom: none; /* Remove bottom border for last row */
-}
-
-/* Make sure the section stays wide even on larger screens */
-@media (min-width: 1200px) {
-    #recommendations {
-        max-width: 1200px;
-    }
-}
+        .recommendation:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
       .stars {
         font-size: 18px;
         color: gold; /* Makes the stars gold */
