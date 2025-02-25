@@ -491,10 +491,10 @@
     .all_recommendations {
         display: flex;
         align-items: inline;
-        margin-left: 1in;
+        margin: 5px;
         flex-direction: row;
         flex-flow: wrap;
-        padding: 1px;
+        padding: 10px;
       }
       
       .recommendation {
