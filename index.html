@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,85 +6,80 @@
     <title>Home - QUADS JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        #discount-products img{
-          max-width:700px;
-            height:252px;
+        #discount-products img {
+            max-width: 700px;
+            height: 252px;
         }
-     .product-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-h3 {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.sale-price {
-    color: red;
-    font-weight: bold;
-}
-
-.original-price {
-    text-decoration: line-through;
-    color: black;
-}
-
-
-
-
-
+    
+        .product-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .product-card {
+            background: #fff;
+            padding-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+    
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    
+        h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    
+        .sale-price {
+            color: red;
+            font-weight: bold;
+        }
+    
+        .original-price {
+            text-decoration: line-through;
+            color: black;
+        }
+    
         /* General page styling */
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0; }
             100% { opacity: 1; }
         }
-
+    
         .blinking-heading {
             font-size: 20px;
             font-weight: bold;
             color: #ff6347; /* A bright color to grab attention */
             animation: blink 1s infinite; /* Blinks every second */
         }
+    
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-
+    
         header {
             background-color: black;
             color: white;
             text-align: center;
             padding: 30px 0;
         }
-
-        
-
+    
         header p {
             font-size: 1.2rem;
-         
         }
-
+    
         /* Navbar Styling */
         nav ul {
             list-style: none;
@@ -92,13 +87,12 @@ h3 {
             margin: 0;
             display: flex;
             justify-content: center;
-             
         }
-
+    
         nav li {
             margin: 0 15px; /* Space between links */
         }
-
+    
         nav a {
             text-decoration: none;  
             color: inherit;          
@@ -106,13 +100,13 @@ h3 {
             font-weight: normal;    
             transition: all 0.3s ease; 
         }
-
+    
         /* On Hover */
         nav a:hover {
             font-weight: bold;  /* Make text bold on hover */
             color: white;     /* Keep the color same as the original (no blue) */
         }
-
+    
         /* Slideshow container */
         .slideshow-container {
             position: relative;
@@ -120,12 +114,12 @@ h3 {
             margin: auto;
             overflow: hidden;
         }
-
-
+    
         .product-grid {
             display: flex;
-             justify-content: space-evenly;
+            justify-content: space-evenly;
         }
+    
         /* Hide all slides initially */
         .mySlides {
             display: none;
@@ -134,13 +128,13 @@ h3 {
             object-fit: cover; /* Ensures images cover the container without stretching */
             transition: opacity 1s ease-in-out; /* Smooth transition */
         }
-
+    
         /* Dots container */
         .dots-container {
             text-align: center;
             margin-top: 10px;
         }
-
+    
         .dot {
             height: 15px;
             width: 15px;
@@ -150,11 +144,11 @@ h3 {
             display: inline-block;
             transition: background-color 0.6s ease;
         }
-
+    
         .dot.active {
             background-color: #717171;
         }
-
+    
         /* Footer Styling */
         footer {
             background-color: #222;
@@ -166,23 +160,23 @@ h3 {
             flex-direction: column;
             align-items: center;
         }
-
+    
         .container {
             width: 100%;
             max-width: 600px;
         }
-
+    
         .row {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
         }
-
+    
         .col {
             text-align: center;
         }
-
+    
         footer a {
             color: white;
             text-decoration: none;
@@ -190,15 +184,15 @@ h3 {
             display: block;
             margin-bottom: 5px;
         }
-
+    
         footer a:hover {
             color: blue;
         }
-
+    
         .footer-content {
             margin-top: 15px;
         }
-
+    
         .social-media {
             list-style: none;
             padding: 0;
@@ -206,85 +200,141 @@ h3 {
             justify-content: center;
             gap: 15px;
         }
-
+    
         .social-media li {
             display: inline-block;
         }
-
+    
         .social-media a {
             display: block;
             width: 40px;
             height: 40px;
         }
-
+    
         .social-media img {
             width: 100%;
             height: 100%;
             display: block;
         }
-
+    
         html, body {
             height: 100%;
         }
-
+    
         body {
             display: flex;
             flex-direction: column;
         }
-
+    
         footer {
             margin-top: auto;
         }
-/* Pop-up Modal Styling */
-/* Style for the Popup */
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the popup */
-    width: 80%; /* Set the width to 80% of the screen (can adjust as needed) */
-    max-width: 600px; /* Max width to avoid it getting too wide */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    display: none; /* Hidden by default */
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%; /* Ensure content takes the full width of the popup */
-    text-align: left;
-    overflow-y: auto; /* Allow scrolling for long descriptions */
-    max-height: 80vh; /* Limit the height to 80% of the viewport height */
-}
-
-#popupDescription {
-    display: block;
-    margin-top: 10px;
-    text-align: justify; /* Optional: for better text alignment */
-}
     
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-
-
-
-
-/* Background Overlay */
-.popup.show {
-    display: block;
-}
-
+        /* Pop-up Modal Styling */
+        /* Style for the Popup */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the popup */
+            width: 80%; /* Set the width to 80% of the screen (can adjust as needed) */
+            max-width: 600px; /* Max width to avoid it getting too wide */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%; /* Ensure content takes the full width of the popup */
+            text-align: left;
+            overflow-y: auto; /* Allow scrolling for long descriptions */
+            max-height: 80vh; /* Limit the height to 80% of the viewport height */
+        }
+    
+        #popupDescription {
+            display: block;
+            margin-top: 10px;
+            text-align: justify; /* Optional: for better text alignment */
+        }
+    
+        .cta-button {
+            display: block;
+            background: #fbfdff8a;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+    
+        .cta-button:hover {
+            background: #fbfdff56;
+            font-weight: bold;
+        }
+    
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    
+        /* Background Overlay */
+        .popup.show {
+            display: block;
+        }
+    
+        /* Responsive Changes */
+        @media (max-width: 768px) {
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .product-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+    
+            header p {
+                font-size: 1rem;
+            }
+    
+            h3 {
+                font-size: 16px;
+            }
+    
+            .mySlides {
+                height: 250px; /* Adjust height for smaller screens */
+            }
+    
+            .popup {
+                width: 90%; /* Adjust popup size on smaller screens */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .product-card {
+                width: 95%;
+            }
+    
+            .slideshow-container {
+                max-width: 100%;
+            }
+    
+            .popup {
+                width: 100%; /* Full width for popup */
+            }
+        }
+    
     </style>
+    
 </head>
 <body>
        <header>
@@ -333,7 +383,7 @@ h3 {
         <h3>Classic Watch</h3>
         <p class="sale-price">R539.99</p>
         <p class="original-price">R799.99'</p>
-        <button class="cta-button" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99' 'images/photo3.png')">View Product</button>
+        <button class="cta-button" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99', 'images/photo3.png')">View Product</button>
     </div>
 
     <div class="product-card" onclick="openPopup('Sport Watch', 'R199.99', 'An Omega Speedmaster Moonwatch is an essential timepiece for every watch collection. It is the ultimate tool watch with a track record to back that claim up. In 1969, the Speedmaster became the first watch on the Moon when Buzz Aldrin set foot on the lunar surface. Additionally, the watch played a crucial role in getting the Apollo 13 crew back safely to Earth a year later. The Speedmaster’s story is full of extraordinary tales that prove it’s the ultimate tool watch and why it deserves a prominent spot in any collection.')">
@@ -404,7 +454,7 @@ h3 {
         <button type="submit">Submit Review</button>
     </form>
 
-    <div id="popupMessage">Review submitted successfully!</div>
+    <div id="RevpopupMessage">Review submitted successfully!</div>
 </section>
 
 
@@ -478,7 +528,7 @@ h3 {
             reviewsList.appendChild(newRecommendation);
 
             // Show the popup message
-            const popupMessage = document.getElementById('popupMessage');
+            const popupMessage = document.getElementById('RevpopupMessage');
             popupMessage.style.display = 'block';
 
             // Hide the popup after 3 seconds
