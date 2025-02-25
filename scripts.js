@@ -126,7 +126,8 @@ function handleSearch(event) {
 }
 
 //Modal Functionality
-function showWatchDetails(name, price, stock, description) {
+function showWatchDetails(image, name, price, stock, description) {
+    document.getElementById("modal-image").src = image;
     document.getElementById("modal-title").textContent = name;
     document.getElementById("modal-price").textContent = price;
     document.getElementById("modal-stock").textContent = stock;
