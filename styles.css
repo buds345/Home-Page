@@ -777,7 +777,7 @@
         }
 
         /* Popup Message */
-        #popupMessage {
+        #RevpopupMessage {
             display: none;
             position: fixed; /* Fixed position for centering */
             top: 50%;
