@@ -246,23 +246,34 @@ h3 {
             margin-top: auto;
         }
 /* Pop-up Modal Styling */
+/* Style for the Popup */
 .popup {
-    display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    background:  #f4f4f45d;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-content {
-    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 80%;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .popup img {
@@ -271,14 +282,7 @@ h3 {
     border-radius: 5px;
 }
 
-.close-btn {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    color: red;
-}
+
 
 /* Background Overlay */
 .popup.show {
@@ -329,17 +333,14 @@ h3 {
     <section id="discount-products">
         <h2 class="blinking-heading">🔥 Get 20% Off on All Discount Products! 🔥</h2>
 <div class="product-grid">
-    <div class="product-card">
-        <img src="images/photo3.png" alt="Classic Watch" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99', 'images/photo3.png')">
+    <div class="product-card" onclick="openPopup('Classic Watch', 'R249.99', 'R299.99', 'The third and last AIYISHI is not a Moonwatch. As with all great legacies, they have to start somewhere, and for the Speedmaster, it started in 1957. That year, Omega introduced the Seamaster 300, the Railmaster, and the Speedmaster. Little did the brand know that the last would go on to define history by becoming the first watch on the Moon.')">
+         <img src="images/photo3.png" alt="Watch 11">
         <h3>Classic Watch</h3>
         <p class="sale-price">R539.99</p>
         <p class="original-price">RR799.99'</p>
        
        
-        <button class="cta-button" onclick="showPopup('
-            AIYISHI',
-            'In Stock', 'The third and last AIYISHI is not a Moonwatch. As with all great legacies, they have to start somewhere, and for the Speedmaster, it started in 1957. That year, Omega introduced the Seamaster 300, the Railmaster, and the Speedmaster. Little did the brand know that the last would go on to define history by becoming the first watch on the Moon.
-        , 'images/photo3.png')">View Product</button>
+        <button class="cta-button" onclick="showPopup('Classic Watch', 'R249.99', 'R299.99' 'images/photo3.png')">View Product</button>
     </div>
 
     <div class="product-card">
@@ -361,17 +362,16 @@ h3 {
 </div>
 
 <!-- Pop-up Modal -->
-<div id="popup" class="popup">
+
+<div id="popupMessage" class="popup" style="display:none;">
     <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <img id="popup-image" src="" alt="Product Image">
-        <h2 id="popup-title"></h2>
-        <p class="sale-price" id="popup-sale-price"></p>
-         <p class="original-price" id="popup-original-price"></p>
-       
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h2 id="popupTitle">Watch Details</h2>
+        <p><strong>Price:</strong> <span id="popupPrice">R249.99</span></p>
+        <p><strong>Description:</strong> <span id="popupDescription">This is the description...</span></p>
+        <button onclick="closePopup()">Close</button>
     </div>
 </div>
-
  
 
 </section>
