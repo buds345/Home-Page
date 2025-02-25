@@ -495,18 +495,20 @@ h3 {
             // Clear the form+
             document.getElementById('reviewForm').reset();
         });
-function showPopup(title, salePrice, originalPrice, imageUrl) {
-    document.getElementById('popup-title').innerText = title;
-    document.getElementById('popup-sale-price').innerText = salePrice;
-    document.getElementById('popup-original-price').innerText = originalPrice;
-    document.getElementById('popup-image').src = imageUrl;
+// Function to open the popup and show details
+function openPopup(title, price, description) {
+    document.getElementById("popupTitle").innerText = title;
+    document.getElementById("popupPrice").innerText = price;
+    document.getElementById("popupDescription").innerText = description;
 
-    document.getElementById('popup').classList.add("show");
+    document.getElementById("popupMessage").style.display = "flex"; // Show the popup
 }
 
+// Function to close the popup
 function closePopup() {
-    document.getElementById('popup').classList.remove("show");
+    document.getElementById("popupMessage").style.display = "none"; // Hide the popup
 }
+
 
     
     </script>
