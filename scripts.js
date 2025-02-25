@@ -127,19 +127,17 @@ function handleSearch(event) {
 
 //Modal Functionality
 function showWatchDetails(imageSrc, name, price, stock, description) {
+    document.getElementById("modal-image").src = image;
     document.getElementById("modal-title").textContent = name;
     document.getElementById("modal-price").textContent = price;
     document.getElementById("modal-stock").textContent = stock;
     document.getElementById("modal-description").textContent = description;
     document.getElementById("watchModal").style.display = "flex";
 
-    const modalImage= document.getElementById('modal-image');
-    modalImage.src = imageSrc;
-    modalImage.alt = title;
-    
-
-    document.getElementById('watchModal').style.display = 'block';
-
+}
+function openModal() {
+    document.getElementById('watchModal').style.display = 'flex';
+}
 function closeModal() {
     document.getElementById("watchModal").style.display = "none";
 }
