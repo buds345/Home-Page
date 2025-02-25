@@ -673,7 +673,12 @@
     }
 
         /* Recommendation Section */
-     .all_recommendations {
+      #recommendations {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .all_recommendations {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
