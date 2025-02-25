@@ -10,13 +10,57 @@
           max-width:700px;
             height:252px;
         }
-      #discount-products img{
-    transition: transform 0.3s ease-in-out; /* Smooth animation */
+     .product-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#discount-products img:hover {
-    transform: scale(1.2); /* 1.2x enlargement */
+.product-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
 }
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.sale-price {
+    color: red;
+    font-weight: bold;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: black;
+}
+
+.cta-button {
+    display: block;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
 
         /* General page styling */
         @keyframes blink {
@@ -400,6 +444,20 @@
             // Clear the form
             document.getElementById('reviewForm').reset();
         });
+function showPopup(title, salePrice, originalPrice, imageUrl) {
+    document.getElementById('popup-title').innerText = title;
+    document.getElementById('popup-sale-price').innerText = salePrice;
+    document.getElementById('popup-original-price').innerText = originalPrice;
+    document.getElementById('popup-image').src = imageUrl;
+
+    document.getElementById('popup').style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = "none";
+}
+
+    
     </script>
     
 </body>
