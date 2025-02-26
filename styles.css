@@ -376,6 +376,7 @@
     /* Different colors for success and error */
     .popup.success {
         background: grey;
+        color: white;
     }
     
     .popup.error {
