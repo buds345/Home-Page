@@ -631,46 +631,71 @@
     }
     
     /* Watches Section */
-    .watch-container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 20px;
-    }
-    
-    .watch-item {
-        background-color: #fff;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        max-width: 250px;
-        text-align: center;
-        transition: 0.3s;
-    }
-    
-    .watch-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-    
-    .watch-item p {
-        font-weight: bold;
-        margin: 10px 0;
-        font-size: 18px;
-    }
-    
-    .watch-item span {
-        color: #d32f2f;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    
+   .watch-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap for better mobile spacing */
+    padding: 10px; /* Less padding for small screens */
+}
+
+/* Ensuring watch items adjust well on all screen sizes */
+.watch-item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%; /* Full width for small screens */
+    max-width: 250px; /* Limits size for larger screens */
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Ensuring images remain responsive */
+.watch-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Typography adjustments for better readability */
+.watch-item p {
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 16px; /* Slightly smaller for smaller screens */
+}
+
+.watch-item span {
+    color: #d32f2f;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hover effect only for larger screens */
+@media (min-width: 768px) {
     .watch-item:hover {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-    
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+    .watch-container {
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .watch-item {
+        padding: 10px;
+        max-width: 100%; /* Allows full width on very small screens */
+    }
+
+    .watch-item p,
+    .watch-item span {
+        font-size: 14px; /* Smaller fonts for tiny screens */
+    }
+}
+
     /* Footer */
     footer {
         background-color: #222;
