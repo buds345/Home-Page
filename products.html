@@ -6,46 +6,68 @@
     <title>Shop Watches - QUAD JEWELLERS</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-         
-footer .social-media {
-  list-style: none;
-  padding: 0;
-}
-
-footer .social-media li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-footer .social-media a {
-  display: block;
-  width: 40px;
-  height: 40px;
-}
-
-footer .social-media img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-footer .social-media a:focus {
-  outline: 2px solid #ff6600; /* Change this color for better visibility */
-}
-@media (max-width: 600px) {
-  footer .social-media li {
-    margin: 0 5px;
-  }
-}
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .category-container, .watch-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .category-box, .watch-item {
+            flex: 1 1 300px;
+            margin: 10px;
+            text-align: center;
+        }
+        .watch-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer .social-media {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        footer .social-media li {
+            margin: 0 5px;
+        }
+        footer .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            .category-container, .watch-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <h1>QUADS JEWELLERS</h1>
         <p>Elegant Timepieces for Every Occasion</p>
     </header>
-
-    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -54,8 +76,6 @@ footer .social-media a:focus {
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-
-    <!-- Product Categories -->
     <section id="categories">
         <h2>Choose Your Style</h2>
         <div class="category-container">
@@ -63,220 +83,36 @@ footer .social-media a:focus {
             <a href="#womens-watches" class="category-box">Women’s Watches</a>
         </div>
     </section>
-
-    <!-- Men's Watches Section -->
     <section id="mens-watches">
         <h2>Men’s Luxury Watches</h2>
         <div class="watch-container">
             <div class="watch-item">
-    <img src="images/watch6.jpg" alt="Men's Watch 1" class="image-modal">
-    <p>Luxury Chronograph</p>
-    <span>R499.99</span>
-    <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Luxury Chronograph', 'R499.99', 'In Stock', 'A high-end luxury chronograph with stainless steel case.')">View Details</button>
-</div>
-            <div class="watch-item">
-    <img src="watch7.jpg" alt="Men's Watch 1" class="image-modal">
-    <p>Classic Leather Timepiece</p>
-    <span>R499.99</span>
-    <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Classic Leather Timepiece', 'R499.99', 'In Stock', 'Classic Leather Timepiece was introduced in 2021, it became the world’s thinnest perpetual calendar watch. The timepiece features a 40mm titanium case that is just 5.8mm thick. ')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/pro4.png" alt="Men's Watch 3">
-                <p>
-                    Stainless Steel Elegance
-                </p>
-                <span>R599.99</span>
+                <img src="images/watch6.jpg" alt="Men's Watch 1">
+                <p>Luxury Chronograph</p>
+                <span>R499.99</span>
                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Stainless Steel Elegance', 'R599.99', 'In Stock', 'Stainless Steel Elegance is one of the most affordable perpetual calendar watches on the market. With its integrated bracelet, this 41mm modern sports watch provides the perfect canvas for incorporating such a complex function. The watch features four sub-dials: the date at 3 o’clock, the moon phase at 6 o’clock, the day at 9 o’clock, and the month and leap year at 12 o’clock.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="images/pro3.png" alt="Men's Watch 4">
-                <p>
-                    Rolex
-                </p>
-                <span>R659.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Rolex', 'R659.99', 'In Stock', 'Simple, elegant, and wonderfully well-designed, the Conquest is Longines’ answer to the Rolex Explorer, with its understated design perfectly suited to all sorts of occasions. ')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="watch10.jpg" alt="Men's Watch 5">
-                <p>
-                    Premium Stainless Steel
-                </p>
-                <span>R359.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Premium Stainless Steel', 'R359.99', 'In Stock', 'This modern sports watch features a 41.5mm case that is just 8.1mm thick, complemented by a beautifully integrated bracelet. The dial layout is similar to the Frederique Constant, with the date at 3 o’clock, the moon phase at 6 o’clock, the day at 9 o’clock, and the month and leap year at 12 o’clock. Despite the wealth of information, the dial remains perfectly balanced and visually appealing.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="watch11.jpg" alt="Men's Watch 6">
-                <p>
-                   Limited edition
-                </p>
-                <span>R1999.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Limited edition', 'R1999.99', 'In Stock', 'This 41mm timepiece epitomizes the classic perpetual calendar style that Patek Philippe has mastered. The watch also includes a chronograph function, making it even more complex. The day and month are displayed at 12 o’clock, while the date and moon phase are combined in a sub-dial at 6 o’clock. The remaining sub-dials house the chronograph functions, creating a truly sophisticated timepiece.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="watch12.jpg" alt="Men's Watch 7">
-                <p>
-                    Top class steel
-                </p>
-                <span>R999.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Top class steel', 'R999.99', ' This watch is powered by an in-house movement featuring a calendar complication that requires no manual correction until the year 3999. Even more astonishing, the moon phase indicator only needs an adjustment after 45 million years. The watch itself is visually striking, with a 44mm platinum case and a sapphire dial with sapphire sub-dials. Despite the wealth of information displayed, the design ensures excellent legibility. The IWC Portugieser Eternal Calendar is truly a one-of-a-kind masterpiece.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="images/pro1.png" alt="Men's Watch 7">
-                <p> 
-                    Real Gold
-                </p>
-                <span>R1999.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Real Gold', 'R1999.99', 'In Stock', 'The sleek dial features only a date window at 4 o’clock and a power reserve indicator at 10 o’clock. Additionally, four centrally mounted hands indicate the hours, minutes, running seconds, and months. Since there are no month markers on the dial, reading it is a bit abstract. The leap year indicator is located on the reverse side of the watch, within the beautifully crafted hand-wound HMC 812 manufacture caliber. This is a unique and conceptual take on the perpetual calendar.')">View Details</button>
             </div>
         </div>
     </section>
-
-    <!-- Women's Watches Section -->
     <section id="womens-watches">
         <h2>Women’s Elegant Watches</h2>
         <div class="watch-container">
             <div class="watch-item">
                 <img src="images/watch4.jpg" alt="Women's Watch 1">
-                <p>
-                    Diamond Accent Watch
-                </p>
-                <span>R399.99</span>
-                  <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Diamond Accent Watch', 'R399.99', 'In Stock', 'Over the years, the brand has released numerous stunning versions, including a white gold model with a blue dial for John Mayer and a brown open-worked edition for Travis Scott. One standout model is the Ultra-Thin version, featuring a titanium case that weighs just 75 grams and measures only 6.2mm thick. The in-house self-winding caliber 5133, at just 2.9mm thick, makes this incredible feat of engineering possible.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch5.jpg" alt="Women's Watch 2">
-                <p>
-                   Rose Gold Elegance
-                        </p>
-                <span>R429.99</span>
-                <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Rose Gold Elegance', 'R429.99', 'In Stock', 'The Rose Gold Elegance boasts a 39mm rose gold case and a beautifully executed silver guilloché dial. Large indicators for the date and month take center stage, while smaller hands display the leap year and day of the week. A moon phase sits elegantly between 2 and 3 o’clock, resulting in a refined and sophisticated perpetual calendar.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch6.jpg" alt="Women's Watch 3">
-                <p>
-                    Sleek Minimalist Timepiece
-                </p>
-                <span>R299.99</span>
-                <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Sleek Minimalist Timepiece', 'R299.99', 'In Stock', 'The iconic Lange 1 design—with its off-center time display and large date window—remains intact, with a clever peripheral date wheel encircling the dial. The minimalist day display sits on the left, the moon phase below, and a small leap year indicator at 6 o’clock. The dial is beautifully balanced, ensuring easy readability of all the perpetual calendar functions.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="images/watch1.jpg" alt="Women's Watch 4">
-                <p>
-             Omega
-                </p>
-                <span>R459.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Omega', 'R459.99', 'In Stock', 'An Omega Speedmaster Moonwatch is an essential timepiece for every watch collection. It is the ultimate tool watch with a track record to back that claim up. In 1969, the Speedmaster became the first watch on the Moon when Buzz Aldrin set foot on the lunar surface. Additionally, the watch played a crucial role in getting the Apollo 13 crew back safely to Earth a year later. The Speedmaster’s story is full of extraordinary tales that prove it’s the ultimate tool watch and why it deserves a prominent spot in any collection.')">View Details</button>
-            </div>
-             <div class="watch-item">
-                <img src="images/watch2.jpg" alt="Women's Watch 5">
-                <p>
-                   AIYISHI
-                </p>
-                <span>R799.99</span>
-                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('AIYISH', 'R799.99', 'In Stock', 'The first pick is a limited edition from 2008 that has become a much-desired Speedmaster among collectors. While it might be a coveted collector’s item, the story of this quirky Speedy is not well known among the wider audience.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch3.jpg" alt="Women's Watch 6">
-                <p>
-                    Wrist Watch
-                </p>
+                <p>Diamond Accent Watch</p>
                 <span>R399.99</span>
                 <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Wrist Watch', 'R399.99', 'In Stock', 'This model is special because it features a titanium case, a first for the Moonwatch. The lightweight case is matched with a Sedna gold bezel, which is Wrist watches proprietary rose gold alloy.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch4.jpg" alt="Women's Watch 7">
-                <p>
-                   AIYISHI
-                </p>
-                <span>R799.99</span>
-                <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('AIYISHI', 'R799.99', 'In Stock', 'The third and last AIYISHI is not a Moonwatch. As with all great legacies, they have to start somewhere, and for the Speedmaster, it started in 1957. That year, Omega introduced the Seamaster 300, the Railmaster, and the Speedmaster. Little did the brand know that the last would go on to define history by becoming the first watch on the Moon.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch5.jpg" alt="Women's Watch 8">
-                <p>
-                    Watch Quartz analogue
-                </p>
-                <span>R899.99</span>
-                <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Watch Quartz analogue', 'R899.99', 'In Stock', 'is undoubtedly one of the most legendary watches of all time. However, its ever-increasing price is making it harder and harder for watch enthusiasts and collectors to own one.')">View Details</button>
-            </div>
-            <div class="watch-item">
-                <img src="images/watch6.jpg" alt="Women's Watch 9">
-                <p>
-                   Fresh College Style
-                </p>
-                <span>R799.99</span>
-                <p class="stock-status">In Stock</p>
-    <button onclick="showWatchDetails('Fresh College Style', 'R799.99', 'In Stock', 'This is model stands apart from most other Speedmasters. At 41.5 mm, the Mark II is all about functionality, both visually and technically. Its cushion-shaped case and integrated bracelet ooze 1970s charm. ')">View Details</button>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
     <footer>
-        <!--Footer content, ie social media platforms -->
-        <div class="container">
-          <div class="row">
-            <div class="col">
-             
-             <a href="footerInfo.html#Refunds;">Refunds policy</a>
-            </div>
-            <div class="col">
-             <a href="footerInfo.html#terms">Terms and conditions</a> 
-            </div>
-            <div class="col">
-              <a href="contact.html"> ©2025, Quad Jewellers Products</a>
-            
-            </div>
-          </div>
+        <div class="footer-content">
+            <ul class="social-media">
+                <li><a href="#"><img src="images/twitter.jfif" alt="Twitter"></a></li>
+                <li><a href="#"><img src="images/Facebook_logo.jpeg" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/instagram.jfif" alt="Instagram"></a></li>
+            </ul>
         </div>
-            <div class="footer-content">
-              
-              <ul class="social-media">
-                <li><a href="https://x.com/?lang=en-za&mx=2" target="_blank" aria-label="Follow us on Twitter">
-                  <img src="images/twitter.jfif" alt="" role="presentation">
-                </a></li>
-                <li><a href="https://www.facebook.com/login.php/" target="_blank" aria-label="Follow us on Facebook">
-                  <img src="images/Facebook_logo.jpeg" alt="" role="presentation">
-                </a></li>
-                <li><a href="https://www.instagram.com/accounts/login/" target="_blank" aria-label="Follow us on Instagram">
-                  <img src="images/instagram.jfif" alt="" role="presentation">
-                </a></li>
-               
-              </ul>
-            </div>
-            
-  </footer>
-
-   
-    <!-- Modal Structure -->
-  <div id="watchModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title"></h2>
-      <!-- Product Image -->
-      <p><strong>Price:</strong> <span id="modal-price"></span></p>
-      <p><strong>Stock Status:</strong> <span id="modal-stock"></span></p>
-      <p><strong>Description:</strong></p>
-      <p id="modal-description"></p>
-    </div>
-  </div> 
-     <script src="scripts.js"></script>
+    </footer>
 </body>
 </html>
-
